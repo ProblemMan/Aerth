@@ -1,0 +1,18 @@
+{
+	id: "5F7FFC53EBBEF7F8"
+	group: "0415D7F1C7F3C848"
+	order_index: 0
+	filename: "plan"
+	title: "Plan"
+	default_quest_shape: ""
+	default_hide_dependency_lines: false
+	quests: [{
+		x: -4.5d
+		y: -6.0d
+		id: "0658CD0270760674"
+		tasks: [{
+			id: "420832F150FEB92D"
+			type: "custom"
+		}]
+	}]
+}

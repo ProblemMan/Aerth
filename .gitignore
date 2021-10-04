@@ -1,0 +1,12 @@
+/mods
+/logs
+/saves
+/resourcepacks
+/natives
+config.bak.json
+config.json
+hotbar.nbt
+options.txt
+*.code-workspace
+usercache.json
+usernamecache.json
