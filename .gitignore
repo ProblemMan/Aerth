@@ -10,3 +10,5 @@ options.txt
 *.code-workspace
 usercache.json
 usernamecache.json
+config_new_temp.json
+config/jei/bookmarks.ini
