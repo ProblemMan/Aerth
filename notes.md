@@ -24,6 +24,8 @@ diamond shards are used for engineer presses not diamonds
 
 Bottle of quantum darkness. Collected by right clicking in the spatial dimension.
 
+Interfaces are later game... thats right, no autocrafting till later on. Try force them to use molecular assemblers with hoppers (or importers and patterns at first. Oh yeah, disable/make later game the sequential fabricator.
+
 **Story**
 
 You have crashed down on an unfamiliar earth-like planet. You do not know where, or how you came to be here. You have your spaceship, with emergency supplies and the spatial pylons. The backup boxes are still there, and there are always going to be moere hidden around the ship, you know how the ship builders did that.
