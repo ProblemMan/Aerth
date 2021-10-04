@@ -39,3 +39,5 @@ OR:
 
 A smallish construction, with a small item terminal system (unpowered). A small chamber in the back contains a 2x2x2 spatial chamber, which you can use to pull structures out of these strange quantum compression cells.
 FOR GENERATING: https://minecraft-recurrent-complex.fandom.com/wiki/Using_Recurrent_Complex_as_a_Utility
+
+Maybe a tardis instead of a ship.. (no, its definetly nt casue my building skills are terrible)
