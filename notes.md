@@ -22,8 +22,17 @@ silcon press should give a couple, or silicon recipe gives 2 silicon
 
 diamond shards are used for engineer presses not diamonds
 
+Bottle of quantum darkness. Collected by right clicking in the spatial dimension.
+
+**Story**
+
+You have crashed down on an unfamiliar earth-like planet. You do not know where, or how you came to be here. You have your spaceship, with emergency supplies and the spatial pylons. The backup boxes are still there, and there are always going to be moere hidden around the ship, you know how the ship builders did that.
 
 
-__**Story**__
+__Ship__
 
-You have crashed down on an unfamiliar earth-like planet. You do not know where, or how you came to be here.  
+A few supplies left over from the crash, of which there is no remains. These include some spatial pylons, a spatial cell, a certus pick and a spatial chamber thingy.
+
+OR:
+
+A smallish construction, with a small item terminal system (unpowered). A small chamber in the back contains a 2x2x2 spatial chamber, which you can use to pull structures out of these strange quantum compression cells.
