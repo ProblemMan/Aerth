@@ -1,5 +1,7 @@
 __**Kube Notes**__
 
+AROOGIA
+
 Waystones should be easier. Maybe balance by making sharestones early game, and waystones late game (singularity??)
 
 Singularity should be a major crafting component - maybe an infused singularity cluster?? Melt down into gooey singularity then allow with stufff
@@ -11,6 +13,8 @@ liquid of smart? made of melted books
 
 
 make large singularity require the centre thingy from a wireless ae2 thingo
+
+Gate gunpowder so its late game, hich means quantum entangled singularritys are late game as well, which is good.
 
 
 
@@ -30,6 +34,8 @@ Interfaces are later game... thats right, no autocrafting till later on. Try for
 
 You have crashed down on an unfamiliar earth-like planet. You do not know where, or how you came to be here. You have your spaceship, with emergency supplies and the spatial pylons. The backup boxes are still there, and there are always going to be moere hidden around the ship, you know how the ship builders did that.
 
+There is no regular mob spawning here, all materials must be fabricted elsehow. Blizz, Basalz and co should spawn however, tho the specifcs of that I am not sure. custom Kube item with r click action? 
+The only mobs that spawn are Blaze Basalz Blitz Blizz, and only rarely in small groups. 
 
 __Ship__
 
