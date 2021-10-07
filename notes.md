@@ -29,6 +29,8 @@ diamond shards are used for engineer presses not diamonds
 Bottle of quantum darkness. Collected by right clicking in the spatial dimension.
 
 Interfaces are later game... thats right, no autocrafting till later on. Try force them to use molecular assemblers with hoppers (or importers and patterns at first. Oh yeah, disable/make later game the sequential fabricator.
+Custom Augments
+https://github.com/KingLemming/1.16/blob/main/CoFHCore/src/main/java/cofh/lib/util/constants/NBTTags.java
 
 **Story**
 
