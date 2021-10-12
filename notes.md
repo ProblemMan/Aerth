@@ -16,7 +16,9 @@ make large singularity require the centre thingy from a wireless ae2 thingo
 
 Gate gunpowder so its late game, hich means quantum entangled singularritys are late game as well, which is good.
 
+Crystal compenents, a few new tiers.
 
+Nether quartz crafted from certus 
 
 Add info in tooltip for waystones to suggest sharestones
 Machine Frame requires processors. Only the engineering one though. Servo requires calculation press.
@@ -31,6 +33,14 @@ Bottle of quantum darkness. Collected by right clicking in the spatial dimension
 Interfaces are later game... thats right, no autocrafting till later on. Try force them to use molecular assemblers with hoppers (or importers and patterns at first. Oh yeah, disable/make later game the sequential fabricator.
 Custom Augments
 https://github.com/KingLemming/1.16/blob/main/CoFHCore/src/main/java/cofh/lib/util/constants/NBTTags.java
+
+**Mobs and spawning**
+ - All normal hostile and passive mob spawning should be disabled
+ - Blizz, Basalz, Blaze and Blitz should be the only mobs spawning. They will spawn in clusters of 3-4, relatively rarely
+ - Blaze and Basalz are found underground, and Blitz and Blizz are above gound (Desert and snow biomes??)
+
+
+
 
 **Story**
 
