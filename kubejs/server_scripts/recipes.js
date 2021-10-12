@@ -3,7 +3,7 @@
 onEvent('recipes', r => {
     //Removals
     r.remove({input: 'waystones:warp_stone'})
-
+    r.remove({output: 'thermal:machine_frame'})
     r.remove({output: 'thermal:obsidian_glass'})
     //Additions
 
@@ -122,6 +122,7 @@ onEvent('recipes', r => {
       })
     }
     tinkersSimpleAlloy('kubejs:molten_hardened_glass', 100, 500, 'tconstruct:molten_glass', 100, 'tconstruct:molten_obsidian', 50)
+    r.recipes.thermal.bottler('thermal:machine_frame', ['#forge:gears/quartz', Fluid.of('kubejs:molten_hardened_glass', 1000)])
     tinkersCastingTable('thermal:machine_frame', 200, 'kubejs:molten_hardened_glass', 4000, '#forge:gears/quartz')
     r.recipes.thermal.press('thermal:machine_frame', '#forge:gears/quartz', Item.of('4x thermal:obsidian_glass'))
     tinkersCastingTable('thermal:obsidian_glass', 100, 'kubejs:molten_hardened_glass', 1000)
