@@ -59,3 +59,14 @@ A smallish construction, with a small item terminal system (unpowered). A small 
 FOR GENERATING: https://minecraft-recurrent-complex.fandom.com/wiki/Using_Recurrent_Complex_as_a_Utility
 
 Maybe a tardis instead of a ship.. (no, its definetly nt casue my building skills are terrible)
+
+
+
+**WORLD GEN**
+ - Respawn anchor: yes, bed: no
+ - piglins are safe
+ - has raids false
+ - custom infiniburn tag?
+ - ultrawarm false.. definitely false
+ - natrual.. up for debate on this. Not sure if clocks should work.
+ - Obsidian 'meteors' generating around alot
