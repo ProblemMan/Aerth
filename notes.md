@@ -70,3 +70,8 @@ Maybe a tardis instead of a ship.. (no, its definetly nt casue my building skill
  - ultrawarm false.. definitely false
  - natrual.. up for debate on this. Not sure if clocks should work.
  - Obsidian 'meteors' generating around alot
+
+
+ **Annoying mods**
+  - Tinkers, doesn't have config for slimes spawning on slimy grass
+  - AE2, doesn't use the vanilla system for generating meteorites.
