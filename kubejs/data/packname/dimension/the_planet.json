@@ -3,7 +3,7 @@
 	"generator": {
 		"type": "minecraft:noise",
 		"seed": 489245266,
-		"settings": "minecraft:overworld",
+		"settings": "packname:planet",
 		"biome_source": {
 			"type": "minecraft:multi_noise",
 			"seed": 489245266,
