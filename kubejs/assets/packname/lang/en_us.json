@@ -1,0 +1,17 @@
+{
+    "biome.packname.badlands": "Badlands",
+    "biome.packname.desert_hills": "Desert Hills",
+    "biome.packname.desert": "Desert",
+    "biome.packname.forest": "Forest",
+    "biome.packname.frosty_lowlands": "Frosty Lowlands",
+    "biome.packname.gravelly_mountains": "Gravelly Mountains",
+    "biome.packname.meteorite_plains": "Meteorite Plains",
+    "biome.packname.mountain_edge": "Mountain Edge",
+    "biome.packname.savanna": "Savanna",
+    "biome.packname.snowcapped_peaks": "Snow-capped Peaks",
+    "biome.packname.snowy_tundra": "Snowy Tundra",
+    
+    "block.appliedenergistics2.smooth_sky_stone_chest": "Polsihed Blackstone Chest",
+    "block.appliedenergistics2.sky_stone_chest": "Blackstone Chest",
+    "gui.appliedenergistics2.SkyChest": "Blackstone Chest"
+}
