@@ -75,3 +75,12 @@ Maybe a tardis instead of a ship.. (no, its definetly nt casue my building skill
  **Annoying mods**
   - Tinkers, doesn't have config for slimes spawning on slimy grass
   - AE2, doesn't use the vanilla system for generating meteorites.
+
+
+
+  **Special Mentions & Preorders**
+  Pre-orders
+   - 352167522436513803 (Yesmar)
+   - 224054554134577159 (ティム)
+   - 407312113191747584 (Eninj)
+   - 660780691352584192 (Purplik)
