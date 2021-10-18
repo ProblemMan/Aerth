@@ -6,7 +6,7 @@
 	#If true, tables such as the part builder and tinker station will show all variants. If false they will show just the first entry in the tag, typically oak.
 	showAllTableVariants = true
 	#Set this to false to disable new players spawning with the Tinkers' Book.
-	shouldSpawnWithTinkersBook = true
+	shouldSpawnWithTinkersBook = false
 	#If non-empty, only this material will be shown on tools in creative and JEI (or the first valid material if this is invalid for the tool).
 	#If empty, all materials will show
 	showOnlyToolMaterial = ""
@@ -38,7 +38,7 @@
 	[recipes.heads]
 		stray = true
 		husk = true
-		blaze = true
+		blaze = false
 		cave_spider = true
 		drowned = true
 		spider = true
@@ -49,7 +49,7 @@
 	#Generate Cobalt
 	generateCobalt = true
 	#Generate Copper
-	generateCopper = true
+	generateCopper = false
 	#Approx Ores per Chunk
 	veinCountCobalt = 8
 	#Approx Ores per Chunk
@@ -64,7 +64,7 @@
 			#Range: 10 ~ 500
 			separation = 30
 			#If true, this island generates
-			generate = true
+			generate = false
 
 		#Options related to earth slime islands spawning in the oceans
 		[worldgen.slime_islands.earth]
@@ -72,7 +72,7 @@
 			#Range: 10 ~ 500
 			separation = 25
 			#If true, this island generates
-			generate = true
+			generate = false
 
 		#Settings for end slime islands in the outer end islands
 		[worldgen.slime_islands.end]
@@ -80,7 +80,7 @@
 			#Range: 10 ~ 500
 			separation = 25
 			#If true, this island generates
-			generate = true
+			generate = false
 
 		#Settings for blood islands in the nether lava ocean
 		[worldgen.slime_islands.blood]
@@ -88,7 +88,7 @@
 			#Range: 10 ~ 500
 			separation = 13
 			#If true, this island generates
-			generate = true
+			generate = false
 
 		#Settings for clay islands in the overworld sky
 		[worldgen.slime_islands.clay]
@@ -96,7 +96,7 @@
 			#Range: 10 ~ 500
 			separation = 100
 			#If true, this island generates
-			generate = true
+			generate = false
 
 #Features to use in debugging gameplay and mechanics, generally should not be enabled in packs
 [debug]

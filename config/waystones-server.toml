@@ -61,7 +61,7 @@
 		dimensionalWarpXpCost = 3
 		#Set to 'ALLOW' to allow dimensional warp in general. Set to 'GLOBAL_ONLY' to restrict dimensional warp to global waystones. Set to 'DENY' to disallow all dimensional warps.
 		#Allowed Values: ALLOW, GLOBAL_ONLY, DENY
-		dimensionalWarp = "ALLOW"
+		dimensionalWarp = "DENY"
 
 	#These options apply to teleporting from one waystone to another by right-clicking it.
 	[server.waystoneToWaystone]
