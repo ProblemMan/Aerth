@@ -1,0 +1,54 @@
+{
+	"type": "minecraft:decorated",
+	"config": {
+		"decorator": {
+			"type": "minecraft:count",
+			"config": {
+				"count": {
+					"base": -7,
+					"spread": 8
+				}
+			}
+		},
+		"feature": {
+			"type": "minecraft:decorated",
+			"config": {
+				"decorator": {
+					"type": "minecraft:square",
+					"config": {}
+				},
+				"feature": {
+					"type": "minecraft:decorated",
+					"config": {
+						"decorator": {
+							"type": "minecraft:heightmap",
+							"config": {}
+						},
+						"feature": {
+							"type": "minecraft:block_pile",
+							"config": {
+								"state_provider": {
+									"type": "minecraft:weighted_state_provider",
+									"entries": [
+										{
+											"weight": 7,
+											"data": {
+												"Name": "minecraft:obsidian"
+											}
+										},
+										{
+											"weight": 1,
+											"data": {
+												"Name": "minecraft:crying_obsidian"
+											}
+										}
+									]
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

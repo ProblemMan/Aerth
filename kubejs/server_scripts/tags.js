@@ -1,12 +1,12 @@
 // priority: 1
-onEvent('item.tags', event => {
+onEvent('item.tags', t => {
+    t.add('forge:ores/bitumen', 'kubejs:bitumen_ore')
+})
+
+onEvent('block.tags', t => {
 
 })
 
-onEvent('block.tags', event => {
-
-})
-
-onEvent('fluid.tags', event => {
+onEvent('fluid.tags', t => {
 
 })

@@ -12,7 +12,7 @@
     "water_color": 4159204,
     "water_fog_color": 329011
   },
-  "surface_builder": "minecraft:grass",
+  "surface_builder": "packname:meteorite",
   "carvers": {
     "air": [
       "minecraft:cave",
@@ -24,7 +24,10 @@
     [
       "minecraft:lake_lava"
     ],
-    [],
+    [
+      "packname:small_asteroid",
+      "packname:scattered_asteroid"
+    ],
     [],
     [],
     [],
@@ -72,7 +75,7 @@
   "player_spawn_friendly": true,
   "precipitation": "rain",
   "temperature": 0.8,
-  "downfall": 0.4,
+  "downfall": 0.0,
   "category": "plains",
   "depth": 0.125
 }

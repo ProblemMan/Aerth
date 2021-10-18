@@ -47,7 +47,7 @@
 					}
 				},
 				{
-					"biome": "packname:frozen_river",
+					"biome": "packname:frosty_lowlands",
 					"parameters": {
 						"altitude": 0,
 						"temperature": -0.8,
@@ -57,7 +57,7 @@
 					}
 				},
 				{
-					"biome": "packname:snowy_mountains",
+					"biome": "packname:snowcapped_peaks",
 					"parameters": {
 						"altitude": 0,
 						"temperature": -0.6,
@@ -87,7 +87,7 @@
 					}
 				},
 				{
-					"biome": "packname:plains",
+					"biome": "packname:meteorite_plains",
 					"parameters": {
 						"altitude": 0,
 						"temperature": 0,

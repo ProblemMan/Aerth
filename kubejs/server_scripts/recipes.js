@@ -61,6 +61,28 @@ onEvent('recipes', r => {
         S: 'appliedenergistics2:singularity'
     })
 
+    console.log("hello world")
+    //replacement of skystone with blackstone
+    r.remove({output: /appliedenergistics2:.*sky_stone.*/})
+    r.replaceInput({}, 'appliednergistics:sky_stone_block', 'minecraft:blackstone')
+    r.replaceInput({type: 'minecraft:crafting_shaped'}, 'appliedenergistics2:smooth_sky_stone_block', 'minecraft:polished_blackstone')
+    r.shaped('appliedenergistics2:sky_stone_chest', [
+      'BBB',
+      'B B',
+      'BBB'
+    ], {
+      B: 'minecraft:blackstone'
+    })
+
+    r.shaped('appliedenergistics2:smooth_sky_stone_chest', [
+      'BBB',
+      'B B',
+      'BBB'
+    ], {
+      B: 'minecraft:polished_blackstone'
+    })
+    
+
     //seeds //TODO: Add others, finalise numbers (after augments added)
     r.recipes.thermal.insolator('appliedenergistics2:purified_certus_quartz_crystal', 'appliedenergistics2:certus_crystal_seed').water(64000).energyMod(10.0)
     
@@ -126,4 +148,7 @@ onEvent('recipes', r => {
     tinkersCastingTable('thermal:machine_frame', 200, 'kubejs:molten_hardened_glass', 4000, '#forge:gears/quartz')
     r.recipes.thermal.press('thermal:machine_frame', '#forge:gears/quartz', Item.of('4x thermal:obsidian_glass'))
     tinkersCastingTable('thermal:obsidian_glass', 100, 'kubejs:molten_hardened_glass', 1000)
+    
+    //Bitumen proccessing
+    r.recipes.thermal.pulverizer(['thermal:oil_sand', Item.of('thermal:tar').chance(0.5), Item.of('minecraft:gravel').chance(0.2)], 'kubejs:bitumen_ore')
 })

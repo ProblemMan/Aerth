@@ -1,9 +1,9 @@
 onEvent('item.registry', event => {
-    event.create('large_singularity').displayName('Enriched/Embedded Singularity')  //todo: Rename. Stabilised?
+   
 })
 
 onEvent('block.registry', event => {
-
+    event.create('bitumen_ore').material('rock').harvestTool('pickaxe', 2).displayName('Bitumen Ore')
 })
 
 onEvent('fluid.registry', event => {

@@ -68,8 +68,8 @@
       {
         "type": "thermal:blitz",
         "weight": 10,
-        "minCount": 1,
-        "maxCount": 3
+        "minCount": 3,
+        "maxCount": 4
       }
     ],
     "ambient": [],
