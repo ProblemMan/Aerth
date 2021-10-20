@@ -61,8 +61,7 @@ onEvent('recipes', r => {
         S: 'appliedenergistics2:singularity'
     })
 
-    console.log("hello world")
-    //replacement of skystone with blackstone
+    //replacement of skystone with blackstone and removal of skystone
     r.remove({output: /appliedenergistics2:.*sky_stone.*/})
     r.replaceInput({}, 'appliednergistics:sky_stone_block', 'minecraft:blackstone')
     r.replaceInput({type: 'minecraft:crafting_shaped'}, 'appliedenergistics2:smooth_sky_stone_block', 'minecraft:polished_blackstone')
@@ -81,6 +80,9 @@ onEvent('recipes', r => {
     ], {
       B: 'minecraft:polished_blackstone'
     })
+    r.remove({output: 'appliedenergistics2:sky_dust'})
+
+    r.replaceInput('minecraft:experience_bottle', 'tconstruct:earth_slime_crystal')
     
 
     //seeds //TODO: Add others, finalise numbers (after augments added)
