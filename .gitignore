@@ -24,3 +24,6 @@ kubejs/pack.mcmeta
 kubejs/packname_archive.zip
 /*xaero*/
 config/xaerominimap.txt
+/.mixin.out
+/minecraftinstance.json
+*.curseclient
