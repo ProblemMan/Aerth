@@ -40,6 +40,16 @@ https://github.com/KingLemming/1.16/blob/main/CoFHCore/src/main/java/cofh/lib/ut
  - Blaze and Basalz are found underground, and Blitz and Blizz are above gound (Desert and snow biomes??)
 
 
+Adding mekanism for the pipes (should ideally be later game) and the reactors + induction cell.
+
+
+
+
+
+**KUBE HUD**
+Music. Hopefully
+WAISA - use an item to raytrace and tell you the block you are staring at. Cool blue holographic zoom line animation
+
 
 
 **Story**
