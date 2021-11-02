@@ -1,0 +1,23 @@
+{
+	id: "502767BAED04EE04"
+	group: ""
+	order_index: 0
+	filename: "crash"
+	title: "Crash"
+	default_quest_shape: ""
+	default_hide_dependency_lines: false
+	quests: [{
+		x: 0.5d
+		y: -0.5d
+		id: "61737075E921028F"
+		tasks: [{
+			id: "2E255B930431A85E"
+			type: "item"
+			item: "minecraft:diamond"
+		}]
+		rewards: [{
+			id: "1FAB32E9CE19484A"
+			type: "custom"
+		}]
+	}]
+}

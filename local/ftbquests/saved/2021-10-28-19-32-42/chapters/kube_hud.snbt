@@ -1,0 +1,102 @@
+{
+	id: "5D8AB50E499AFE2F"
+	group: ""
+	order_index: 1
+	filename: "kube_hud"
+	title: "Kube HUD"
+	default_quest_shape: ""
+	default_hide_dependency_lines: false
+	quests: [
+		{
+			x: 0.0d
+			y: 0.0d
+			shape: "pentagon"
+			size: 4.0d
+			id: "3094D718A4FB8D40"
+			tasks: [{
+				id: "02C56F869E5592DA"
+				type: "item"
+				item: {
+					id: "thermal:hazmat_helmet"
+					Count: 1b
+					tag: {
+						Damage: 0
+					}
+				}
+				consume_items: true
+				only_from_crafting: true
+			}]
+			rewards: [
+				{
+					id: "7B6569E6772C99E1"
+					type: "custom"
+					title: "Install Kube HUD"
+					icon: {
+						id: "appliedenergistics2:name_press"
+						Count: 1b
+						tag: { }
+					}
+					auto: "no_toast"
+				}
+				{
+					id: "5E7967EFB223D593"
+					type: "gamestage"
+					auto: "invisible"
+					stage: "hud_on"
+				}
+			]
+		}
+		{
+			x: 2.0d
+			y: -2.5d
+			shape: "pentagon"
+			dependencies: ["3094D718A4FB8D40"]
+			size: 2.0d
+			id: "27D7739380408C8F"
+			tasks: [{
+				id: "3CEB428913112ECC"
+				type: "item"
+				item: "minecraft:map"
+			}]
+		}
+		{
+			x: 3.0d
+			y: 1.0d
+			shape: "pentagon"
+			dependencies: ["3094D718A4FB8D40"]
+			size: 2.0d
+			id: "4CDBC527285BAE09"
+			tasks: [{
+				id: "797873914112EBA9"
+				type: "item"
+				item: "minecraft:note_block"
+			}]
+		}
+		{
+			x: 0.0d
+			y: 3.0d
+			shape: "pentagon"
+			dependencies: ["3094D718A4FB8D40"]
+			size: 2.0d
+			id: "589DA782942A9B94"
+			tasks: [{
+				id: "2520146C966731D8"
+				type: "item"
+				item: "minecraft:jukebox"
+			}]
+		}
+		{
+			x: -3.0d
+			y: 1.0d
+			shape: "pentagon"
+			dependencies: ["3094D718A4FB8D40"]
+			size: 2.0d
+			id: "26A73F3905CDC5CE"
+			tasks: [{
+				id: "7994AD5262AABE46"
+				type: "item"
+				item: "minecraft:glass"
+			}]
+		}
+	]
+}

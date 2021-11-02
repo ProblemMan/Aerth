@@ -27,3 +27,5 @@ config/xaerominimap.txt
 /.mixin.out
 /minecraftinstance.json
 *.curseclient
+config/ftbquests.zip
+config/ftbquestsBACKUP.zip
