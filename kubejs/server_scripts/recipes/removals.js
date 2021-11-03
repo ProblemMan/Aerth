@@ -14,6 +14,6 @@ onEvent('recipes', r => {
     r.remove({output: 'appliedenergistics2:sky_dust'})
 
     //Tinkers Construct
-    s.remove({id: /tconstruct:tools\/severing\/.*_head/})
-    s.remove({id: /tconstruct:tools\/severing\/.*_skull/})
+    r.remove({id: /tconstruct:tools\/severing\/.*_head/})
+    r.remove({id: /tconstruct:tools\/severing\/.*_skull/})
 })
