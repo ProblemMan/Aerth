@@ -1,7 +1,106 @@
 
-
 const quests = {
-    unlock = '3094D718A4FB8D40',
-    map = '27D7739380408C8F',
-    music = '589DA782942A9B94'
+    main: '3094D718A4FB8D40',
+    world_map: '',
+    minimap: '27D7739380408C8F',
+    entity_radar: '',
+    cave_maps: '',
+    waypoints: '',
+    //music: '589DA782942A9B94',
+    quest_alerts: ''
 }
+
+/*let music = {
+    sound: '',
+    volume: '',
+    playlist: [],
+    songs: [
+        {name:'', length: 0},
+        {name:'', length: 0},
+        {name:'', length: 0},
+        {name:'', length: 0},
+        {name:'', length: 0},
+        {name:'', length: 0},
+    ]
+}*/
+
+let quest_alerts = {
+    sound: '', 
+    volume: 0.5
+}
+
+
+for (i in quests) {
+    onEvent(`ftbquests.completed.${quests[i]}`, q => {
+
+        q.player.stages.add(`hud.${i}.on`)
+        q.player.stages.add(`hud.${i}.enabled`)
+
+        i_format = i.replace(/_/g, ' ')
+        i_format = i_format.charAt(0).toUpperCase() + str.slice(1)
+
+        q.player.tell({"text":`${i_format} HUD element unlocked! Enabling...`})
+        console.log(i + ' unlocked and enabled!')
+
+        let player = q.player
+        q.server.scheduleInTicks(100, qS => {
+            qS.server.runCommandSilent(`tellraw ${player} {"text":"Enabled!"}`) //the event.player is not carried over here, so we have to set a seperate variable and use that instead.
+        })
+
+    })
+}
+
+
+let count = {}
+onEvent('player.logged_in', l => {
+    count[l.player] = 0
+})
+
+onEvent('player.tick', t => { //use sparingly, lag warning.
+    /* STUFF THAT GOES IN HERE:
+    Applying potion effects for map disable/enable. Only do this every ~10 ticks.
+    Music loop. Will probably need to have a tick counter to help with this.
+    WTHAISA - What the heck am I staring at. Like waila but shows cool animation and works on any distance (needs user input tho, probably an item... or keybind??)
+    */
+   
+    count[t.player] ++
+    if (count[t.player] % 20 === 0) {
+        //Now we know that we are on the twentieth tick
+        //All xaero potion effects: xaerominimap:no_minimap, xaerominimap:no_entity_radar, xaerominimap:no_waypoints, xaerominimap:no_cave_maps, xaeroworldmap:no_world_map || You can append _benefical or _harmful to them to change the type from neutral
+        if (!t.player.stages.has('hud.world_map')) {
+            t.server.runCommandSilent(`effect give ${t.player} xaeroworldmap:no_world_map 5 0 true`)
+        }
+        if (!t.player.stages.has('hud.minimap')) {
+            t.server.runCommandSilent(`effect give ${t.player} xaerominimap:no_minimap 5 0 true`)
+        } else {
+            if (!t.player.stages.has('hud.cave_maps')) {
+                t.server.runCommandSilent(`effect give ${t.player} xaeroworldmap:no_cave_maps 5 0 true`) //There must be a cleaner way of doing this, but 
+            }
+            if (!t.player.stages.has('hud.entity_radar')) {
+                t.server.runCommandSilent(`effect give ${t.player} xaeroworldmap:no_entity_radar 5 0 true`)
+            }
+        }
+        if (!t.player.stages.has('hud.waypoints')) {
+            t.server.runCommandSilent(`effect give ${t.player} xaeroworldmap:no_waypoints 5 0 true`)
+        }
+    }
+
+    //TODO music stuff here. also figure out how on earth i want it to work.
+})
+
+onEvent('player.logged_in', event => {
+    count[event.player] = 0
+})
+onEvent('item.right_click', c => {
+    if (c.item == 'packname:wthaisa') {
+        console.log('WTHAISA')
+        c.player.sendData('wthaisa', {})
+        c.player.raytrace(30)
+    }
+})
+
+onEvent('ftbquests.completed', q => {
+    if (q.player.stages.has('hud.quest_alerts.on')) {
+        q.player.playSound(quest_alerts.sound, quest_alerts.volume, Math.random())
+    }
+})

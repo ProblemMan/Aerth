@@ -16,4 +16,14 @@ onEvent('recipes', r => {
     //Tinkers Construct
     r.remove({id: /tconstruct:tools\/severing\/.*_head/})
     r.remove({id: /tconstruct:tools\/severing\/.*_skull/})
+    r.remove({id: 'tconstruct:smeltery/seared/grout_multiple'})
+    r.remove({id: /tconstruct:smeltery\/casting\/seared\/.*/})
+    //r.remove({id: 'tconstruct:smeltery/alloys/molten_slimesteel'})
+    r.remove({id: /tconstruct:tables\/.*_anvil/})
+
+    //Ores
+    for (i of global.disabled_ores) {
+        r.remove({input: i})    
+      r.remove({id: /tconstruct:smeltery\/melting\/.*\/i/})
+    }
 })

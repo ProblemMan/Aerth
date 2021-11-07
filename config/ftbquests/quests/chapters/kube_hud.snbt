@@ -26,25 +26,17 @@
 				consume_items: true
 				only_from_crafting: true
 			}]
-			rewards: [
-				{
-					id: "7B6569E6772C99E1"
-					type: "custom"
-					title: "Install Kube HUD"
-					icon: {
-						id: "appliedenergistics2:name_press"
-						Count: 1b
-						tag: { }
-					}
-					auto: "no_toast"
+			rewards: [{
+				id: "7B6569E6772C99E1"
+				type: "custom"
+				title: "Install Kube HUD"
+				icon: {
+					id: "appliedenergistics2:name_press"
+					Count: 1b
+					tag: { }
 				}
-				{
-					id: "5E7967EFB223D593"
-					type: "gamestage"
-					auto: "invisible"
-					stage: "hud_on"
-				}
-			]
+				auto: "no_toast"
+			}]
 		}
 		{
 			x: 2.0d
@@ -57,6 +49,7 @@
 				id: "3CEB428913112ECC"
 				type: "item"
 				item: "minecraft:map"
+				consume_items: true
 			}]
 		}
 		{
@@ -70,6 +63,7 @@
 				id: "797873914112EBA9"
 				type: "item"
 				item: "minecraft:note_block"
+				consume_items: true
 			}]
 		}
 		{
@@ -83,6 +77,7 @@
 				id: "2520146C966731D8"
 				type: "item"
 				item: "minecraft:jukebox"
+				consume_items: true
 			}]
 		}
 		{
@@ -96,6 +91,7 @@
 				id: "7994AD5262AABE46"
 				type: "item"
 				item: "minecraft:glass"
+				consume_items: true
 			}]
 		}
 	]

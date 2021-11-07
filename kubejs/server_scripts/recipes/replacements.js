@@ -7,5 +7,8 @@ onEvent('recipes', r => {
 
     //Tinkers Construct
     r.replaceInput('minecraft:experience_bottle', 'tconstruct:earth_slime_crystal')
+    r.replaceInput({output: 'tconstruct:grout'}, 'minecraft:clay_ball', 'minecraft:blackstone')
 
+    //Thermal
+    r.replaceInput({not: {output: 'minecraft:iron_ingot'}},'minecraft:iron_nugget', 'thermal:tin_nugget')
 })

@@ -6,7 +6,7 @@ onEvent('worldgen.remove', event => {
 
 
 onEvent('worldgen.add', event => {
-    event.addOre(ore => {
+    /*event.addOre(ore => {
         ore.block = 'minecraft:iron_ore' // Block ID (Use [] syntax for properties)
         ore.spawnsIn.blacklist = false // Inverts spawn whitelist
         ore.spawnsIn.values = [ // List of valid block IDs or tags that the ore can spawn in
@@ -24,8 +24,11 @@ onEvent('worldgen.add', event => {
         ore.maxHeight = 64 // Max Y ore spawns in
         ore.squared = true // Adds random value to X and Z between 0 and 16. Recommended to be true
         // ore.chance = 4 // Spawns the ore every ~4 chunks. You usually combine this with clusterCount = 1 for rare ores
-      })
+      })*/
+      //ORES TO ADD:
 
+      //redstone
+      //
 
 
 })

@@ -11,7 +11,7 @@ onEvent('recipes', r => {
             result: Item.of(drop).toResultJson()
         })
     }
-    let tinkersCastingTable = (output, cool_ticks, input_fluid, fluid_mb, input_item) => {
+    let castingTable = (output, cool_ticks, input_fluid, fluid_mb, input_item) => {
         r.custom({
             type: "tconstruct:casting_table",
             fluid: {
@@ -25,7 +25,7 @@ onEvent('recipes', r => {
             cooling_time: cool_ticks
         })
     }
-    let tinkersCastingBasin = (output, cool_ticks, input_fluid, fluid_mb, input_item) => {
+    let castingBasin = (output, cool_ticks, input_fluid, fluid_mb, input_item) => {
         r.custom({
             type: "tconstruct:casting_basin",
             fluid: {
@@ -38,7 +38,7 @@ onEvent('recipes', r => {
             cooling_time: cool_ticks
         })
     }
-    let tinkersComplexAlloy = (output, output_mb, temperature, inputA, inputA_mb, inputB, inputB_mb, inputC, inputC_mb) => { //Complex is three fluid inputs
+    let complexAlloy = (output, output_mb, temperature, inputA, inputA_mb, inputB, inputB_mb, inputC, inputC_mb) => { //Complex is three fluid inputs
         r.custom({
             type: "tconstruct:alloy",
             inputs: [
@@ -62,7 +62,7 @@ onEvent('recipes', r => {
             temperature: temperature
         })
     }
-    let tinkersSimpleAlloy = (output, output_mb, temperature, inputA, inputA_mb, inputB, inputB_mb) => { //Simple is two fluid inputs
+    let simpleAlloy = (output, output_mb, temperature, inputA, inputA_mb, inputB, inputB_mb) => { //Simple is two fluid inputs
         r.custom({
             type: "tconstruct:alloy",
             inputs: [
@@ -82,20 +82,49 @@ onEvent('recipes', r => {
             temperature: temperature
         })
     }
+    let entityMelting = (fluid, fluid_mb, entity, entity_dmg) => {
+        r.custom({
+            type: 'tconstruct:entity_melting',
+            entity: {
+                type: entity
+            },
+            result: {
+                fluid: fluid,
+                amount: fluid_mb
+            },
+            damage: entity_dmg
+        })
+    }
+    let fuel = (fluid, fluid_mb, temp, duration) => {
+        r.custom({
+            type: 'tconstruct:melting_fuel',
+            fluid: {
+                name: fluid,
+                amount: fluid_mb
+            },
+            duration: duration,
+            temperature: temp
+        })
+    }
+
 
     //Thermal
     severing('thermal:blizz', '2x thermal:blizz_rod')
     severing('thermal:basalz', '2x thermal:basalz_rod')
     severing('thermal:blitz', '2x thermal:blitz_rod')
 
-    tinkersCastingTable('thermal:machine_frame', 200, 'kubejs:molten_hardened_glass', 4000, '#forge:gears/quartz')
-    tinkersCastingTable('thermal:obsidian_glass', 100, 'kubejs:molten_hardened_glass', 1000)
+    castingBasin('thermal:machine_frame', 200, 'kubejs:molten_hardened_glass', 4000, '#forge:gears/quartz')
+    castingBasin('thermal:obsidian_glass', 100, 'kubejs:molten_hardened_glass', 1000)
 
-
+    entityMelting('kubejs:balzing_blood', 20, 'thermal:basalz', 2)
+    entityMelting('kubejs:blizzing_blood', 20, 'thermal:blizz', 2)
+    entityMelting('kubejs:blitzing_blood', 20, 'thermal:blitz', 2)
 
 
     //Packname
-    tinkersSimpleAlloy('kubejs:molten_hardened_glass', 100, 500, 'tconstruct:molten_glass', 100, 'tconstruct:molten_obsidian', 50)
+    simpleAlloy('kubejs:molten_hardened_glass', 100, 500, 'tconstruct:molten_glass', 100, 'tconstruct:molten_obsidian', 50)
 
+    fuel('kubejs:blitzing_blood', 50, 2000, 10)
+    fuel('kubejs:blizzing_blood', 100, 1, 2000)
 
 })

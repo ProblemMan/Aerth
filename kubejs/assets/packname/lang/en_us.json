@@ -13,5 +13,9 @@
     
     "block.appliedenergistics2.smooth_sky_stone_chest": "Polsihed Blackstone Chest",
     "block.appliedenergistics2.sky_stone_chest": "Blackstone Chest",
-    "gui.appliedenergistics2.SkyChest": "Blackstone Chest"
+    "gui.appliedenergistics2.SkyChest": "Blackstone Chest",
+
+    "gui.xaero_no_world_map_message": "ERR: NO MAPPING DEVICE FOUND. PLEASE INSERT MAPPING DEVICE",
+
+    "item.tconstruct.encyclopedia": "Tinkers Encyclopedia for experienced Tinkers"
 }

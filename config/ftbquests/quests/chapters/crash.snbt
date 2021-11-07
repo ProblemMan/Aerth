@@ -6,18 +6,477 @@
 	title: "Crash"
 	default_quest_shape: ""
 	default_hide_dependency_lines: false
-	quests: [{
-		x: 0.5d
-		y: -0.5d
-		id: "61737075E921028F"
-		tasks: [{
-			id: "2E255B930431A85E"
-			type: "item"
-			item: "minecraft:diamond"
-		}]
-		rewards: [{
-			id: "1FAB32E9CE19484A"
-			type: "custom"
-		}]
-	}]
+	quests: [
+		{
+			x: -10.0d
+			y: -1.0d
+			shape: "rsquare"
+			size: 2.0d
+			id: "332FBCB9DADA7036"
+			tasks: [{
+				id: "282CD23E42BAD89F"
+				type: "checkmark"
+				title: "Welcome"
+			}]
+		}
+		{
+			title: "Thats a lotta work!"
+			x: 12.0d
+			y: 0.0d
+			dependencies: [
+				"10A87367FDA41FC6"
+				"0A117C5D713493B3"
+			]
+			id: "39E848A2E3E7AF4A"
+			tasks: [{
+				id: "6F5AC9960A84C960"
+				type: "item"
+				item: "thermal:machine_frame"
+			}]
+		}
+		{
+			x: 10.0d
+			y: 1.0d
+			dependencies: [
+				"047BAF90D721D29A"
+				"2E68774CA6DCE5FB"
+				"7EFABE83FB4EB5D5"
+				"4E3C17D6CC035F5D"
+			]
+			id: "10A87367FDA41FC6"
+			tasks: [{
+				id: "3E0CBE680DDFBA37"
+				type: "item"
+				title: "Hardended Glass"
+				item: {
+					id: "itemfilters:or"
+					Count: 1b
+					tag: {
+						items: [
+							{
+								id: "kubejs:molten_hardened_glass_bucket"
+								Count: 1b
+							}
+							{
+								id: "thermal:obsidian_glass"
+								Count: 1b
+							}
+						]
+					}
+				}
+			}]
+		}
+		{
+			x: 10.0d
+			y: -4.0d
+			dependencies: [
+				"16E51FFBA86CA9CE"
+				"5EFC838A26C8F8CE"
+			]
+			id: "0A117C5D713493B3"
+			tasks: [{
+				id: "7A0065AC3197FEE4"
+				type: "item"
+				item: "thermal:quartz_gear"
+			}]
+		}
+		{
+			x: 2.0d
+			y: 0.5d
+			dependencies: [
+				"7A155D7296363563"
+				"27B3BBBF82D9750A"
+			]
+			id: "047BAF90D721D29A"
+			tasks: [{
+				id: "7C0D0698424A842E"
+				type: "item"
+				item: "minecraft:obsidian"
+			}]
+		}
+		{
+			x: 2.0d
+			y: 2.0d
+			dependencies: ["4FC89524D77E0FC4"]
+			id: "7A155D7296363563"
+			tasks: [{
+				id: "620D5640D1551C22"
+				type: "item"
+				item: "thermal:earth_charge"
+			}]
+		}
+		{
+			x: -0.5d
+			y: 0.5d
+			dependencies: ["2FC373D3BD2D2F1D"]
+			id: "4FC89524D77E0FC4"
+			tasks: [{
+				id: "12AF6A953781ADED"
+				type: "item"
+				item: "thermal:basalz_rod"
+			}]
+		}
+		{
+			x: 8.0d
+			y: -1.0d
+			dependencies: ["0EA87B8382D8AAA9"]
+			id: "7EFABE83FB4EB5D5"
+			tasks: [{
+				id: "7B430CB8892541E5"
+				type: "item"
+				item: "tconstruct:smeltery_controller"
+			}]
+		}
+		{
+			x: 8.0d
+			y: -2.5d
+			dependencies: ["0EA87B8382D8AAA9"]
+			id: "2E68774CA6DCE5FB"
+			tasks: [{
+				id: "64F961F82D19BC3C"
+				type: "item"
+				item: "tconstruct:seared_bricks"
+			}]
+		}
+		{
+			x: 6.0d
+			y: -1.0d
+			dependencies: ["4F6CC7D04D18F1E2"]
+			id: "0EA87B8382D8AAA9"
+			tasks: [{
+				id: "78B0A422D865FE46"
+				type: "item"
+				item: "tconstruct:seared_brick"
+			}]
+		}
+		{
+			title: "I am Grout!"
+			x: 4.0d
+			y: -1.0d
+			dependencies: [
+				"4E3C17D6CC035F5D"
+				"627E012F0F5A7C1A"
+				"73075B2D15C75F73"
+			]
+			id: "4F6CC7D04D18F1E2"
+			tasks: [{
+				id: "6442636DDC068E6D"
+				type: "item"
+				item: "tconstruct:grout"
+			}]
+		}
+		{
+			x: 4.0d
+			y: 3.5d
+			dependencies: ["2FC373D3BD2D2F1D"]
+			id: "4E3C17D6CC035F5D"
+			tasks: [{
+				id: "0EC97B01FFF6AE31"
+				type: "item"
+				title: "Sand"
+				icon: "minecraft:sand"
+				item: {
+					id: "itemfilters:tag"
+					Count: 1b
+					tag: {
+						value: "minecraft:sand"
+					}
+				}
+			}]
+		}
+		{
+			title: "It's called the Badlands for a reason"
+			x: -0.5d
+			y: 2.0d
+			description: [
+				"Watch out during night time, things can get rather spicy!"
+				"Bring a sword"
+			]
+			dependencies: ["2A4CA6D1F3C3C449"]
+			id: "2FC373D3BD2D2F1D"
+			tasks: [{
+				id: "160DFA7560700F2A"
+				type: "biome"
+				title: "Visit the Badlands"
+				icon: "minecraft:terracotta"
+				biome: "packname:badlands"
+			}]
+		}
+		{
+			x: 2.0d
+			y: -2.5d
+			dependencies: ["27B3BBBF82D9750A"]
+			id: "73075B2D15C75F73"
+			tasks: [{
+				id: "4ACBDE6FF34BFAD0"
+				type: "item"
+				item: "minecraft:blackstone"
+			}]
+		}
+		{
+			title: "Oooo, shiny!"
+			x: 10.0d
+			y: -5.5d
+			dependencies: ["386256E2A493EFE2"]
+			id: "16E51FFBA86CA9CE"
+			tasks: [{
+				id: "33C19327CC1B34A1"
+				type: "item"
+				item: "appliedenergistics2:certus_quartz_crystal"
+			}]
+		}
+		{
+			x: 2.0d
+			y: -1.0d
+			dependencies: ["27B3BBBF82D9750A"]
+			id: "627E012F0F5A7C1A"
+			tasks: [{
+				id: "125AE56504A47AF9"
+				type: "item"
+				item: "minecraft:gravel"
+			}]
+		}
+		{
+			title: "So many rocks.."
+			x: -0.5d
+			y: -1.0d
+			dependencies: ["2A4CA6D1F3C3C449"]
+			id: "27B3BBBF82D9750A"
+			tasks: [{
+				id: "316326383CE101E4"
+				type: "biome"
+				title: "Visit the Meteriote Plains"
+				icon: "minecraft:obsidian"
+				biome: "packname:meteorite_plains"
+			}]
+		}
+		{
+			title: "Don't Mine at Night"
+			x: -2.5d
+			y: -2.5d
+			description: [
+				"Minings going to be rather important for gathering resources."
+				"Be ware tho, many things lurk down there in the depths"
+			]
+			dependencies: [
+				"2A4CA6D1F3C3C449"
+				"646098224D198AE2"
+			]
+			id: "54C8012356B72114"
+			tasks: [{
+				id: "6CD4E8D617C143F1"
+				type: "observation"
+				title: "Start Spelunking!"
+				icon: "minecraft:stone"
+				timer: 0L
+				observe: "block:minecraft:stone"
+			}]
+		}
+		{
+			x: 7.0d
+			y: -4.0d
+			dependencies: ["393E1AED33B05243"]
+			id: "5EFC838A26C8F8CE"
+			tasks: [{
+				id: "60B610B46A8F36DE"
+				type: "item"
+				item: "thermal:tin_ingot"
+			}]
+		}
+		{
+			title: "Ore's a-plenty!"
+			x: 4.0d
+			y: -4.0d
+			description: ["The ores on this planet are strange. Hardly any of them are reconisable."]
+			dependencies: ["54C8012356B72114"]
+			id: "393E1AED33B05243"
+			tasks: [{
+				id: "1B1E99308F336E28"
+				type: "item"
+				title: "Any Ore"
+				item: {
+					id: "itemfilters:tag"
+					Count: 1b
+					tag: {
+						value: "forge:ores"
+					}
+				}
+			}]
+		}
+		{
+			x: -6.0d
+			y: -1.0d
+			description: ["... so you better start doing!"]
+			id: "2A4CA6D1F3C3C449"
+			tasks: [{
+				id: "4B9C12F1C15F1B36"
+				type: "checkmark"
+				title: "Theres a lot of stuff to do"
+			}]
+		}
+		{
+			x: -6.0d
+			y: -4.0d
+			description: ["Tools are probably a good idea. Some wood should be able to be fashioned into basic tables for construction of parts."]
+			id: "1DA3DCB23E11575F"
+			tasks: [
+				{
+					id: "20850635097E6894"
+					type: "item"
+					title: "Tinkers Station"
+					icon: {
+						id: "tconstruct:tinker_station"
+						Count: 1b
+						tag: {
+							texture: "minecraft:oak_planks"
+						}
+					}
+					item: {
+						id: "itemfilters:tag"
+						Count: 1b
+						tag: {
+							value: "tconstruct:tables"
+						}
+					}
+				}
+				{
+					id: "320AA70E5CFDC71A"
+					type: "item"
+					title: "Part Builder"
+					icon: {
+						id: "tconstruct:part_builder"
+						Count: 1b
+						tag: {
+							texture: "minecraft:oak_planks"
+						}
+					}
+					item: {
+						id: "itemfilters:tag"
+						Count: 1b
+						tag: {
+							value: "tconstruct:tables"
+						}
+					}
+				}
+				{
+					id: "4F23AB43AD5BEE70"
+					type: "item"
+					title: "Part Chest"
+					item: "tconstruct:part_chest"
+				}
+			]
+			rewards: [{
+				id: "345147EE47F56A71"
+				type: "item"
+				item: "tconstruct:tinkers_chest"
+			}]
+		}
+		{
+			title: "Better Tools"
+			icon: {
+				id: "tconstruct:tinkers_anvil"
+				Count: 1b
+				tag: {
+					texture: "tconstruct:tinkers_bronze_block"
+				}
+			}
+			x: -0.5d
+			y: -5.5d
+			description: ["The Tinkers Anvil allows you to make even more tools!"]
+			dependencies: [
+				"393E1AED33B05243"
+				"1DA3DCB23E11575F"
+			]
+			id: "0E0EFF6FE0423CF5"
+			tasks: [{
+				id: "36A9128CD1C26907"
+				type: "item"
+				item: "tconstruct:tinkers_anvil"
+			}]
+		}
+		{
+			x: 7.0d
+			y: -5.5d
+			description: ["Deep down there are many precious gems, though what good they are in this foriegn land is yet to be determined."]
+			dependencies: ["393E1AED33B05243"]
+			id: "386256E2A493EFE2"
+			tasks: [{
+				id: "7245BA0008273598"
+				type: "item"
+				title: "Gems!"
+				icon: "thermal:ruby"
+				item: {
+					id: "itemfilters:tag"
+					Count: 1b
+					tag: {
+						value: "forge:gems"
+					}
+				}
+			}]
+		}
+		{
+			x: -5.0d
+			y: -2.5d
+			description: ["A trusty stone pickaxe should get you started mining!"]
+			dependencies: ["1DA3DCB23E11575F"]
+			id: "646098224D198AE2"
+			tasks: [{
+				id: "525215606E113061"
+				type: "item"
+				icon: {
+					id: "tconstruct:pickaxe"
+					Count: 1b
+					tag: {
+						tic_multipliers: { }
+						tic_stats: {
+							"tconstruct:attack_speed": 1.2f
+							"tconstruct:mining_speed": 4.4f
+							"tconstruct:attack_damage": 1.0f
+							"tconstruct:harvest_level": 1.0f
+							"tconstruct:durability": 104.0f
+						}
+						tic_broken: 0b
+						tic_modifiers: [
+							{
+								name: "tconstruct:piercing"
+								level: 1s
+							}
+							{
+								name: "tconstruct:stonebound"
+								level: 3s
+							}
+						]
+						tic_materials: [
+							"tconstruct:stone"
+							"tconstruct:stone"
+							"tconstruct:stone"
+						]
+						Damage: 0
+						tic_persistent_data: {
+							abilities: 1
+							upgrades: 3
+						}
+					}
+				}
+				item: {
+					id: "tconstruct:pickaxe"
+					Count: 1b
+					tag: {
+						tic_multipliers: { }
+						tic_stats: {
+							"tconstruct:attack_damage": 0.0f
+							"tconstruct:attack_speed": 1.2f
+						}
+						tic_broken: 0b
+						tic_modifiers: [{
+							name: "tconstruct:piercing"
+							level: 1s
+						}]
+						Damage: 0
+						tic_persistent_data: { }
+					}
+				}
+			}]
+		}
+	]
 }

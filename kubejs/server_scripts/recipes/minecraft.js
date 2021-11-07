@@ -2,6 +2,7 @@
 
 onEvent('recipes', r => {
 
+    //Waystones
     r.shaped('2x waystones:sharestone', [
         ' B ',
         'BWB',
@@ -11,7 +12,6 @@ onEvent('recipes', r => {
         W: 'waystones:warp_stone',
         C: '#forge:storage_blocks/certus_quartz'
     })
-
     r.shaped('waystones:warp_stone', [
         ' D ',
         'DBD',
@@ -20,7 +20,6 @@ onEvent('recipes', r => {
         D: '#forge:dyes/purple',
         B: 'appliedenergistics2:matter_ball'
     })
-
     r.shaped('waystones:waystone', [
         ' B ',
         'WBW',
@@ -30,7 +29,6 @@ onEvent('recipes', r => {
         W: 'waystones:warp_stone',
         S: 'appliedenergistics2:singularity'
     })
-
     r.shaped('waystones:mossy_waystone', [
         ' B ',
         'WBW',
@@ -40,7 +38,6 @@ onEvent('recipes', r => {
         W: 'waystones:warp_stone',
         S: 'appliedenergistics2:singularity'
     })
-
     r.shaped('waystones:sandy_waystone', [
         ' B ',
         'WBW',
@@ -50,7 +47,6 @@ onEvent('recipes', r => {
         W: 'waystones:warp_stone',
         S: 'appliedenergistics2:singularity'
     })
-
     r.shaped('waystones:portstone', [
         ' B ',
         'BSB',
@@ -60,6 +56,7 @@ onEvent('recipes', r => {
         S: 'appliedenergistics2:singularity'
     })
 
+    //Applied Energistics 2
     r.shaped('appliedenergistics2:sky_stone_chest', [
         'BBB',
         'B B',
@@ -67,12 +64,21 @@ onEvent('recipes', r => {
       ], {
         B: 'minecraft:blackstone'
       })
-  
       r.shaped('appliedenergistics2:smooth_sky_stone_chest', [
         'BBB',
         'B B',
         'BBB'
       ], {
         B: 'minecraft:polished_blackstone'
+      })
+
+      //Tinkers Construct
+      r.shaped('tconstruct:smeltery_controller', [
+          'CCC',
+          'CTC',
+          'CCC'
+      ], {
+          C: '#forge:ingots/copper',
+          T: 'tconstruct:seared_fuel_tank'
       })
 })

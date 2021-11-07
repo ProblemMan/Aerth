@@ -5,8 +5,8 @@
 			"type": "minecraft:count",
 			"config": {
 				"count": {
-					"base": -7,
-					"spread": 8
+					"base": -8,
+					"spread": 9
 				}
 			}
 		},
