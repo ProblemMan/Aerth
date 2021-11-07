@@ -31,3 +31,4 @@ config/ftbquests.zip
 config/ftbquestsBACKUP.zip
 *.ini
 config/xaerominimap.txt
+/texture_dump/*
