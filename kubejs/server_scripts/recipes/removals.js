@@ -7,7 +7,7 @@ onEvent('recipes', r => {
     //Thermal
     r.remove({output: 'thermal:machine_frame'})
     r.remove({output: 'thermal:obsidian_glass'})
-
+r.remove({id: /thermal:machine\/crucible\/.*redstone.*/})
 
     //Applied Energistics 2
     r.remove({output: /appliedenergistics2:.*sky_stone.*/})
@@ -21,9 +21,10 @@ onEvent('recipes', r => {
     //r.remove({id: 'tconstruct:smeltery/alloys/molten_slimesteel'})
     r.remove({id: /tconstruct:tables\/.*_anvil/})
 
+
     //Ores
     for (i of global.disabled_ores) {
-        r.remove({input: i})    
+      r.remove({input: i})    
       r.remove({id: /tconstruct:smeltery\/melting\/.*\/i/})
     }
 })

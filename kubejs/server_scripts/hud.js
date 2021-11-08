@@ -74,7 +74,7 @@ onEvent('player.tick', t => { //use sparingly, lag warning.
             t.server.runCommandSilent(`effect give ${t.player} xaerominimap:no_minimap 5 0 true`)
         } else {
             if (!t.player.stages.has('hud.cave_maps')) {
-                t.server.runCommandSilent(`effect give ${t.player} xaeroworldmap:no_cave_maps 5 0 true`) //There must be a cleaner way of doing this, but 
+                t.server.runCommandSilent(`effect give ${t.player} xaeroworldmap:no_cave_maps 5 0 true`) //There must be a cleaner way of doing this, but eh
             }
             if (!t.player.stages.has('hud.entity_radar')) {
                 t.server.runCommandSilent(`effect give ${t.player} xaeroworldmap:no_entity_radar 5 0 true`)

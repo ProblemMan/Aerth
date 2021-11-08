@@ -11,7 +11,7 @@ onEvent('recipes', r => {
             result: Item.of(drop).toResultJson()
         })
     }
-    let castingTable = (output, cool_ticks, input_fluid, fluid_mb, input_item) => {
+    let castingTable = (output, cool_ticks, input_fluid, fluid_mb, input_item, consume) => {
         r.custom({
             type: "tconstruct:casting_table",
             fluid: {
@@ -19,12 +19,12 @@ onEvent('recipes', r => {
                 amount: fluid_mb
             },
             cast: input_item,
-            cast_consumed: true,
+            cast_consumed: (consume||false),
             result: output,
             cooling_time: cool_ticks
         })
     }
-    let castingBasin = (output, cool_ticks, input_fluid, fluid_mb, input_item) => {
+    let castingBasin = (output, cool_ticks, input_fluid, fluid_mb, input_item, consume) => {
         r.custom({
             type: "tconstruct:casting_basin",
             fluid: {
@@ -32,7 +32,7 @@ onEvent('recipes', r => {
                 amount: fluid_mb
             },
             cast: input_item,
-            cast_consumed: true,
+            cast_consumed: (consume||false),
             result: output,
             cooling_time: cool_ticks
         })
@@ -105,19 +105,34 @@ onEvent('recipes', r => {
             temperature: temp
         })
     }
-
+    let itemMelting = (fluid, fluid_mb, input, temp, duration) => {
+        r.custom({
+            type: 'tconstruct:melting',
+            ingredient: {
+                item: input
+            },
+            result: {
+                fluid: fluid,
+                amount: fluid_mb
+            },
+            temperature: temp,
+            time: duration
+        })
+    }
 
     //Thermal
     severing('thermal:blizz', '2x thermal:blizz_rod')
     severing('thermal:basalz', '2x thermal:basalz_rod')
     severing('thermal:blitz', '2x thermal:blitz_rod')
 
-    castingBasin('thermal:machine_frame', 200, 'kubejs:molten_hardened_glass', 4000, '#forge:gears/quartz')
+    castingBasin('thermal:machine_frame', 200, 'kubejs:molten_hardened_glass', 4000, '#forge:gears/quartz', true)
     castingBasin('thermal:obsidian_glass', 100, 'kubejs:molten_hardened_glass', 1000)
 
     entityMelting('kubejs:balzing_blood', 20, 'thermal:basalz', 2)
     entityMelting('kubejs:blizzing_blood', 20, 'thermal:blizz', 2)
     entityMelting('kubejs:blitzing_blood', 20, 'thermal:blitz', 2)
+
+    itemMelting('thermal:redstone', 144, 'thermal:cinnabar', 700, 70)
 
 
     //Packname
@@ -125,5 +140,9 @@ onEvent('recipes', r => {
 
     fuel('kubejs:blitzing_blood', 50, 2000, 10)
     fuel('kubejs:blizzing_blood', 100, 1, 2000)
+
+    //Minecraft
+    castingTable('minecraft:redstone', 20, 'thermal:redstone', 144, 'appliedeneristics2:certus_quartz_dust', true)
+    castingBasin('minecraft:redstone_block', 200, 'thermal:redstone', 1296, 'appliedenergistics2:quartz_block', true)
 
 })

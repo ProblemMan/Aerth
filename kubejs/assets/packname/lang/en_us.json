@@ -17,5 +17,8 @@
 
     "gui.xaero_no_world_map_message": "ERR: NO MAPPING DEVICE FOUND. PLEASE INSERT MAPPING DEVICE",
 
-    "item.tconstruct.encyclopedia": "Tinkers Encyclopedia for experienced Tinkers"
+    "item.tconstruct.encyclopedia": "Tinkers Encyclopedia for experienced Tinkers",
+
+    "fluid.thermal.redstone": "Destabilized Cinnabar",
+    "item.thermal.redstone_bucket": "Destabilized Cinnabar Bucket"
 }
