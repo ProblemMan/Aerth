@@ -15,7 +15,6 @@ onEvent('recipes', r => {
         r.custom({
             type: "tconstruct:casting_table",
             fluid: {
-
                 name: input_fluid,
                 amount: fluid_mb
             },
