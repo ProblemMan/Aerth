@@ -1,6 +1,5 @@
-### Kube Notes
-
-#AROOGIA
+Kube Notes
+==============
 
 Waystones should be easier. Maybe balance by making sharestones early game, and waystones late game (singularity??)
 

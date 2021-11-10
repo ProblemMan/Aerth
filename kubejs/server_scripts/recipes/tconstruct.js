@@ -9,9 +9,9 @@ onEvent('recipes', r => {
         return n * 144 //TODO: Change this over for more even amounts? 90 sounds okay-ish
     }
     let nuggets = (n) => {
-        return n * 16
+        return n * (ingots(1) / 9)
     }
-    //recipe functions
+    //Recipe Functions
     let severing = (entity, drop) => {
         r.custom({
             type: 'tconstruct:severing',
@@ -125,8 +125,8 @@ onEvent('recipes', r => {
             temperature: temp
         }).id(`packname:fuel/${removeMod(fluid)}`)
     }
-    let itemMelting = (fluid, fluid_mb, input, temp, duration) => {
-        r.custom({
+    let itemMelting = (fluid, fluid_mb, input, temp, duration, extra_products) => {
+        let recipe = {
             type: 'tconstruct:melting',
             ingredient: {
                 item: input
@@ -137,27 +137,16 @@ onEvent('recipes', r => {
             },
             temperature: temp,
             time: duration
-        }).id(`packname:melting/${removeMod(input)}`)
+        }
+        if (products != null) {
+            recipe = Object.assign ({
+                byproducts: extra_products
+            })
+            recipe.type = 'tconstruct:ore_melting' //do these work the same way???
+        }
+        r.custom(recipe).id(`packname:melting/${removeMod(input)}`)
     }
-    let oreMelting = (fluid, fluid_mb, fluid_a, fluid_a_mb, input, temp, duration) => {
-        r.custom({
-            type: 'tconstruct:ore_melting',
-            ingredient: {
-                item: input
-            },
-            result: {
-                fluid: fluid,
-                amount: fluid_mb
-            },
-            temperature: temp,
-            time: duration,
-            byproducts: [{
-                fluid: fluid_a,
-                amount: fluid_a_mb
-            }]
-        }).id(`packname:ore_melting/${removeMod(input)}`)
-    }
-
+    //#endregion
     //Thermal
 
     for (m of [bliz, blitz, basalz]){
@@ -177,7 +166,8 @@ onEvent('recipes', r => {
     itemMelting('thermal:redstone', ingots(1), 'thermal:cinnabar', 700, 70)
     itemMelting('thermal:redstone', ingots(1), 'thermal:cinnabar_dust', 700, 60)
     itemMelting('thermal:redstone', ingots(9), 'thermal:cinnabar_block', 700, 700)
-    oreMelting('thermal:redstone', ingots(1), 'tconstruct:molten_nickel', nuggets(3), 'thermal:cinnabar_ore', 700, 105)
+    itemMelting('thermal:redstone', ingots(1), 'thermal:cinnabar_ore', 700, 105, [{fluid: 'tconstruct:molten_nickel', amount: nuggets(3)}])
+    
     castingTable('thermal:cinnabar', 20, 'thermal:redstone', ingots(1), 'tconstruct:gem_cast', true)
     castingBasin('thermal:cinnabar_block', 200, 'thermal:redstone', ingots(9))
 
