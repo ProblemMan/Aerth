@@ -81,4 +81,16 @@ onEvent('recipes', r => {
           C: '#forge:ingots/copper',
           T: 'tconstruct:seared_fuel_tank'
       })
+
+      //Thermal
+      r.shapeless('4x thermal:signalum_dust', [
+        'thermal:copper_dust',
+        'thermal:copper_dust',
+        'thermal:copper_dust',
+        'thermal:silver_dust',
+        'thermal:cinnabar_dust',
+        'thermal:cinnabar_dust',
+        'thermal:cinnabar_dust',
+        'thermal:cinnabar_dust',
+      ])
 })

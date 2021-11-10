@@ -11,6 +11,17 @@ onEvent('item.tags', t => {
     t.add('forge:gems', 'thermal:ruby')
     t.add('forge:gems/sapphire', 'thermal:sapphire')
     t.add('forge:gems/ruby', 'thermal:ruby')
+
+    let materials = [
+        {type: 'ingots', name: 'copper'},
+        {type: 'gems', name: 'cinnabar'},
+        {type: 'ingots', name: 'silver'},
+        //{type: 'ingots', name: 'signalum'},
+        //{type: 'ingots', name: 'tin'}
+    ]
+    for (let i of materials) {
+        t.add(`forge:${i.name}`, [`#forge:${i.type}/${i.name}`, `#forge:dusts/${i.name}`])
+    }
 })
 
 onEvent('block.tags', t => {

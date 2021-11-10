@@ -11,4 +11,5 @@ onEvent('recipes', r => {
 
     //Thermal
     r.replaceInput({not: {output: 'minecraft:iron_ingot'}},'minecraft:iron_nugget', 'thermal:tin_nugget')
+    r.replaceInput({id: /thermal:dynamo.*/,}, 'minecraft:iron_ingot', 'thermal:signalum_ingot')
 })

@@ -1,4 +1,5 @@
 {
+    "_c___________": "Packname",
     "biome.packname.badlands": "Badlands",
     "biome.packname.desert_hills": "Desert Hills",
     "biome.packname.desert": "Desert",
@@ -8,17 +9,21 @@
     "biome.packname.meteorite_plains": "Meteorite Plains",
     "biome.packname.mountain_edge": "Mountain Edge",
     "biome.packname.savanna": "Savanna",
-    "biome.packname.snowcapped_peaks": "Snow-capped Peaks",
+    "biome.packname.snowcapped_peaks": "Snowcapped Peaks",
     "biome.packname.snowy_tundra": "Snowy Tundra",
     
-    "block.appliedenergistics2.smooth_sky_stone_chest": "Polsihed Blackstone Chest",
+    "__c__________": "Applied Energistics 2",
+    "block.appliedenergistics2.smooth_sky_stone_chest": "Polished Blackstone Chest",
     "block.appliedenergistics2.sky_stone_chest": "Blackstone Chest",
     "gui.appliedenergistics2.SkyChest": "Blackstone Chest",
 
+    "___c_________": "Xaero's Maps",
     "gui.xaero_no_world_map_message": "ERR: NO MAPPING DEVICE FOUND. PLEASE INSERT MAPPING DEVICE",
 
+    "____c________": "Tinkers Construct",
     "item.tconstruct.encyclopedia": "Tinkers Encyclopedia for experienced Tinkers",
 
+    "_____c_______": "Thermal",
     "fluid.thermal.redstone": "Destabilized Cinnabar",
     "item.thermal.redstone_bucket": "Destabilized Cinnabar Bucket"
 }
