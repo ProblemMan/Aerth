@@ -1,6 +1,6 @@
-__**Kube Notes**__
+### Kube Notes
 
-AROOGIA
+#AROOGIA
 
 Waystones should be easier. Maybe balance by making sharestones early game, and waystones late game (singularity??)
 
@@ -28,13 +28,14 @@ silcon press should give a couple, or silicon recipe gives 2 silicon
 
 diamond shards are used for engineer presses not diamonds
 
+Floof crafting recipe. maybe like u grow them in vats??? idk.. also see if i can change texture to be black floofs cause those are cool.
+
 Bottle of quantum darkness. Collected by right clicking in the spatial dimension.
 
 Interfaces are later game... thats right, no autocrafting till later on. Try force them to use molecular assemblers with hoppers (or importers and patterns at first. Oh yeah, disable/make later game the sequential fabricator.
-Custom Augments
-https://github.com/KingLemming/1.16/blob/main/CoFHCore/src/main/java/cofh/lib/util/constants/NBTTags.java
+[Custom Augments](https://github.com/KingLemming/1.16/blob/main/CoFHCore/src/main/java/cofh/lib/util/constants/NBTTags.java)
 
-**Mobs and spawning**
+# Mobs and spawning
  - All normal hostile and passive mob spawning should be disabled
  - Blizz, Basalz, Blaze and Blitz should be the only mobs spawning. They will spawn in clusters of 3-4, relatively rarely
  - Blaze and Basalz are found underground, and Blitz and Blizz are above gound (Desert and snow biomes??)
@@ -45,21 +46,19 @@ Adding mekanism for the pipes (should ideally be later game) and the reactors + 
 
 
 
-
-**KUBE HUD**
+# KUBE HUD
 Music. Hopefully
 WAISA - use an item to raytrace and tell you the block you are staring at. Cool blue holographic zoom line animation
 
 
-
-**Story**
+# Story
 
 You have crashed down on an unfamiliar earth-like planet. You do not know where, or how you came to be here. You have your spaceship, with emergency supplies and the spatial pylons. The backup boxes are still there, and there are always going to be moere hidden around the ship, you know how the ship builders did that.
 
 There is no regular mob spawning here, all materials must be fabricted elsehow. Blizz, Basalz and co should spawn however, tho the specifcs of that I am not sure. custom Kube item with r click action? 
 The only mobs that spawn are Blaze Basalz Blitz Blizz, and only rarely in small groups. 
 
-__Ship__
+# Ship
 
 A few supplies left over from the crash, of which there is no remains. These include some spatial pylons, a spatial cell, a certus pick and a spatial chamber thingy.
 
@@ -71,7 +70,7 @@ Maybe a tardis instead of a ship.. (no, its definetly nt casue my building skill
 
 
 
-**WORLD GEN**
+# WORLD GEN
  - Respawn anchor: yes, bed: no
  - piglins are safe
  - has raids false
@@ -81,13 +80,13 @@ Maybe a tardis instead of a ship.. (no, its definetly nt casue my building skill
  - Obsidian 'meteors' generating around alot
 
 
- **Annoying mods**
+ # Annoying mods
   - Tinkers, doesn't have config for slimes spawning on slimy grass
   - AE2, doesn't use the vanilla system for generating meteorites.
 
 
 
-  **Special Mentions & Preorders**
+  # Special Mentions & Preorders
   Pre-orders
    - 352167522436513803 (Yesmar)
    - 224054554134577159 (ティム)
