@@ -138,10 +138,10 @@ onEvent('recipes', r => {
             temperature: temp,
             time: duration
         }
-        if (products != null) {
-            recipe = Object.assign ({
-                byproducts: extra_products
-            })
+        console.log(extra_products)
+        if (extra_products != null) {
+            console.log('here')
+            recipe.byproducts = extra_products
             recipe.type = 'tconstruct:ore_melting' //do these work the same way???
         }
         r.custom(recipe).id(`packname:melting/${removeMod(input)}`)
@@ -149,10 +149,8 @@ onEvent('recipes', r => {
     //#endregion
     //Thermal
 
-    for (m of [bliz, blitz, basalz]){
-        for(i of m.mobs){
-            severing(`thermal:${i}`, `2x thermal:${i}_rod`)
-        }
+    for (i of ['blizz', 'blitz', 'basalz']){
+        severing(`thermal:${i}`, `2x thermal:${i}_rod`)
     }
 
 
@@ -162,7 +160,7 @@ onEvent('recipes', r => {
     entityMelting('kubejs:balzing_blood', 20, 'thermal:basalz', 2)
     entityMelting('kubejs:blizzing_blood', 20, 'thermal:blizz', 2)
     entityMelting('kubejs:blitzing_blood', 20, 'thermal:blitz', 2)
-
+    
     itemMelting('thermal:redstone', ingots(1), 'thermal:cinnabar', 700, 70)
     itemMelting('thermal:redstone', ingots(1), 'thermal:cinnabar_dust', 700, 60)
     itemMelting('thermal:redstone', ingots(9), 'thermal:cinnabar_block', 700, 700)
@@ -189,5 +187,4 @@ onEvent('recipes', r => {
     castingTable('minecraft:redstone', 30, 'thermal:redstone', ingots(1), 'appliedenergistics2:certus_quartz_dust', true)
     castingBasin('minecraft:redstone_block', 300, 'thermal:redstone', ingots(9), 'appliedenergistics2:quartz_block', true)
     castingTable('minecraft:ender_pearl', 200, 'kubejs:molten_singularity', ingots(1), 'appliedenergistics2:certus_crystal_seed', true)
-
 })

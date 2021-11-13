@@ -29,6 +29,30 @@ let quest_alerts = {
     volume: 0.5
 }
 
+let remove_block_properties = (str) => {
+    if (str.indexOf('[') != -1){
+        output = str.substring(0, str.indexOf('['))
+    } else {
+        output = str
+    }
+    return output
+}
+
+let block_name = (str) => {
+    let name = ''
+    console.log(str)
+    if (str.indexOf('[') != -1){
+        name = Item.of(remove_block_properties(str)).name
+        if (name == 'Air') {
+            console.log('fluid')
+            name = Fluid.of(remove_block_properties(str)).toString()
+        }
+    } else {
+        name = Item.of(str).name
+    }
+    return name
+}
+
 
 for (i in quests) {
     onEvent(`ftbquests.completed.${quests[i]}`, q => {
@@ -89,13 +113,15 @@ onEvent('player.tick', t => { //use sparingly, lag warning.
 })
 
 onEvent('player.logged_in', event => {
-    count[event.player] = 0
+    count[event.player] = 0 //init the tick counting variable.
 })
 onEvent('item.right_click', c => {
+
+    c.player.attack('void', 5)
     if (c.item == 'packname:wthaisa') {
         console.log('WTHAISA')
-        c.player.sendData('wthaisa', {})
-        c.player.raytrace(30)
+        let stared = block_name(c.player.rayTrace(50).block)
+        c.server.runCommandSilent(`title ${c.player} title {"text":"${stared}", "color": "aqua"}`)
     }
 })
 

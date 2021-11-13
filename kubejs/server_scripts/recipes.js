@@ -1,9 +1,13 @@
 // priority: 1
 
 onEvent('recipes', r => {
-    r.shapeless('thermal:machine_frame', [Item.of('#forge:ingots/copper')])
+
 })
 
 onEvent('item.right_click', event => {
-    console.log('thingo')
+    if (event.item == 'minecraft:nether_star') {
+        event.server.scheduleInTicks(1, event => {
+            event.server.runCommand('kubejs reload client_scripts')
+        })
+    }
 })

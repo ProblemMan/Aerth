@@ -4,7 +4,14 @@
     console.log(m.getData(test) + 'Bip')
 })*/
 
-onEvent('player.data_from_server.wthaisa', s => {
+/*onEvent('player.data_from_server.wthaisa', s => {
     console.log('recieved')
-    console.log(s.entity.raytrace(30))
-})
+    console.log(s.data)
+    console.log(s.player.rayTrace(50).block)
+    for (let i in s.player.rayTrace(5)) {
+        console.log(i)
+    }
+    for (let i of s.player.rayTrace(5)) {
+        console.log(i)
+    }
+})*/
