@@ -24,6 +24,31 @@ const quests = {
     ]
 }*/
 
+let wthaisa = {
+    location: {
+        x: 10
+    },
+    size: 1.5,
+    color: 'red'
+}
+
+let fluid_keys = { //TODO: Turn these into lang keys, like block.minecraft.water and block.tconstruct.blazing_blood_fluid. Replace this entirely with lang keys
+	'minecraft:water': 'Water',
+	'minecraft:lava': 'Lava',
+	'tconstruct:blazing_blood_fluid': 'Blazing Blood',
+	'kubejs:blitzing_blood': 'Blitzing Blood',
+	'kubejs:blizzing_blood': 'Blizzing Blood',
+	'kubejs:balzing_blood': 'Balzing Blood'
+}
+
+let removeMod = (string) => {
+	return string.substring((string.indexOf(':') + 1))
+}
+let leaveMod = (string) => {
+	return string.substring(0, string.indexOf(':'))
+}
+
+
 let quest_alerts = {
     sound: '', 
     volume: 0.5
@@ -41,11 +66,14 @@ let remove_block_properties = (str) => {
 let block_name = (str) => {
     let name = ''
     console.log(str)
+    str = str.toString()//For some reason its not a string when it comes out of a raytrace
     if (str.indexOf('[') != -1){
-        name = Item.of(remove_block_properties(str)).name
-        if (name == 'Air') {
-            console.log('fluid')
-            name = Fluid.of(remove_block_properties(str)).toString()
+		str = remove_block_properties(str)
+        name = Item.of(str).name
+        if (name == 'Air') { //its a fluid!
+			if (leaveMod(str) == tconstruct) {
+				//name = translate(`block.${leaveMod(str)}.${removeMod(str)}`) //This could work for all of them, not sure
+			}
         }
     } else {
         name = Item.of(str).name
@@ -114,14 +142,29 @@ onEvent('player.tick', t => { //use sparingly, lag warning.
 
 onEvent('player.logged_in', event => {
     count[event.player] = 0 //init the tick counting variable.
+
+    //init wthaisa display
+    event.player.paint({ 
+		wthaisa: {
+			type: 'text',
+			text: '',
+            color: wthaisa.color,
+			scale: wthaisa.size,
+			x: 0,
+			y: -50,
+			alignX: 'center',
+			alignY: 'bottom',
+			draw: 'ingame',
+			visible: false
+		}
+	})
 })
 onEvent('item.right_click', c => {
-
-    c.player.attack('void', 5)
     if (c.item == 'packname:wthaisa') {
         console.log('WTHAISA')
         let stared = block_name(c.player.rayTrace(50).block)
         c.server.runCommandSilent(`title ${c.player} title {"text":"${stared}", "color": "aqua"}`)
+        c.player.paint({wthaisa: {text: stared.toString(), visible: true}})
     }
 })
 
@@ -129,4 +172,4 @@ onEvent('ftbquests.completed', q => {
     if (q.player.stages.has('hud.quest_alerts.on')) {
         q.player.playSound(quest_alerts.sound, quest_alerts.volume, Math.random())
     }
-})
+}) 
