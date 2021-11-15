@@ -57,8 +57,8 @@ onEvent('recipes', r => {
         }
         r.custom(recipe).id(`packname:casting_basin/${removeMod(output)}`)
     }
-    let complexAlloy = (output, output_mb, temperature, inputA, inputA_mb, inputB, inputB_mb, inputC, inputC_mb) => { //Complex is three fluid inputs
-        r.custom({
+    let alloy = (output, output_mb, temperature, inputA, inputA_mb, inputB, inputB_mb, inputC, inputC_mb) => { //Complex is three fluid inputs
+        let recipe = {
             type: 'tconstruct:alloy',
             inputs: [
                 {
@@ -68,10 +68,6 @@ onEvent('recipes', r => {
                 {
                     name: inputB,
                     amount: inputB_mb
-                },
-                {
-                    name: inputC,
-                    amount: inputC_mb
                 }
             ],
             result: {
@@ -79,27 +75,14 @@ onEvent('recipes', r => {
                 amount: output_mb
             },
             temperature: temperature
-        }).id(`packname:alloy/${removeMod(output)}`)
-    }
-    let simpleAlloy = (output, output_mb, temperature, inputA, inputA_mb, inputB, inputB_mb) => { //Simple is two fluid inputs
-        r.custom({
-            type: 'tconstruct:alloy',
-            inputs: [
-                {
-                    name: inputA,
-                    amount: inputA_mb
-                },
-                {
-                    name: inputB,
-                    amount: inputB_mb
-                },
-            ],
-            result: {
-                fluid: output,
-                amount: output_mb
-            },
-            temperature: temperature
-        }).id(`packname:alloy/${removeMod(output)}`)
+        }
+        if (inputC != null) {
+            recipe.inputs.push({
+                name: inputC,
+                amount: inputC_mb
+            })
+        }
+        r.custom(recipe).id(`packname:alloy/${removeMod(output)}`)
     }
     let entityMelting = (fluid, fluid_mb, entity, entity_dmg) => {
         r.custom({
@@ -125,7 +108,7 @@ onEvent('recipes', r => {
             temperature: temp
         }).id(`packname:fuel/${removeMod(fluid)}`)
     }
-    let itemMelting = (fluid, fluid_mb, input, temp, duration, extra_products) => {
+    let itemMelting = (fluid, fluid_mb, input, temp, duration, extra_ore_products) => {
         let recipe = {
             type: 'tconstruct:melting',
             ingredient: {
@@ -138,10 +121,10 @@ onEvent('recipes', r => {
             temperature: temp,
             time: duration
         }
-        console.log(extra_products)
-        if (extra_products != null) {
+        console.log(extra_ore_products)
+        if (extra_ore_products != null) {
             console.log('here')
-            recipe.byproducts = extra_products
+            recipe.byproducts = extra_ore_products
             recipe.type = 'tconstruct:ore_melting' //do these work the same way???
         }
         r.custom(recipe).id(`packname:melting/${removeMod(input)}`)
@@ -171,17 +154,17 @@ onEvent('recipes', r => {
 
     castingTable('thermal:rf_coil', 60, 'tconstruct:molten_signalum', ingots(1), 'thermal:electrum_ingot', true)
 
-    complexAlloy('tconstruct:molten_signalum', ingots(4), 1000, 'tconstruct:molten_copper', ingots(3), 'tconstruct:molten_silver', ingots(1), 'thermal:redstone', ingots(4)) //TODO: balance amounts of molten cinnabar used here.
+    alloy('tconstruct:molten_signalum', ingots(4), 1000, 'tconstruct:molten_copper', ingots(3), 'tconstruct:molten_silver', ingots(1), 'thermal:redstone', ingots(4)) //TODO: balance amounts of molten cinnabar used here.
 
     //Packname
-    simpleAlloy('kubejs:molten_hardened_glass', 100, 500, 'tconstruct:molten_glass', 100, 'tconstruct:molten_obsidian', 50)
+    alloy('kubejs:molten_hardened_glass', 100, 500, 'tconstruct:molten_glass', 100, 'tconstruct:molten_obsidian', 50)
 
     fuel('kubejs:blitzing_blood', 50, 2000, 10)
     fuel('kubejs:blizzing_blood', 100, 1, 2000)
 
     itemMelting('kubejs:molten_singularity', ingots(1), 'appliedenergistics2:singularity', 1500, 100)
     itemMelting('kubejs:molten_singularity', ingots(1.5/*TODO:Balance this*/), 'appliedenergistics2:quantum_entangled_singularity', 1700, 50)
-    //simpleAlloy('kubejs:molten_singularity', 10, 1, 'kubejs:molten_singularity', 10, /tconstruct:.*/, 1) //no regex support for ingredients 😢. Tags work tho!
+    //alloy('kubejs:molten_singularity', 10, 1, 'kubejs:molten_singularity', 10, /tconstruct:.*/, 1) //no regex support for ingredients 😢. Tags work tho!
 
     //Minecraft
     castingTable('minecraft:redstone', 30, 'thermal:redstone', ingots(1), 'appliedenergistics2:certus_quartz_dust', true)
