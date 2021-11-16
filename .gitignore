@@ -32,3 +32,4 @@ config/ftbquestsBACKUP.zip
 *.ini
 config/xaerominimap.txt
 /texture_dump/*
+/kubejs/server_scripts/muck_around.js
