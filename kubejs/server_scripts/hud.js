@@ -71,7 +71,7 @@ let block_name = (str) => {
 		str = remove_block_properties(str)
         name = Item.of(str).name
         if (name == 'Air') { //its a fluid!
-			if (leaveMod(str) == tconstruct) {
+			if (leaveMod(str) == 'tconstruct') {
 				//name = translate(`block.${leaveMod(str)}.${removeMod(str)}`) //This could work for all of them, not sure
 			}
         }
