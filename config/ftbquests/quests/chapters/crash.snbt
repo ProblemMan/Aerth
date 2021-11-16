@@ -256,12 +256,9 @@
 			y: -2.5d
 			description: [
 				"Minings going to be rather important for gathering resources."
-				"Be ware tho, many things lurk down there in the depths"
+				"Be wary tho, many things lurk down there in the depths"
 			]
-			dependencies: [
-				"2A4CA6D1F3C3C449"
-				"646098224D198AE2"
-			]
+			dependencies: ["2A4CA6D1F3C3C449"]
 			id: "54C8012356B72114"
 			tasks: [{
 				id: "6CD4E8D617C143F1"
@@ -410,70 +407,6 @@
 					Count: 1b
 					tag: {
 						value: "forge:gems"
-					}
-				}
-			}]
-		}
-		{
-			x: -5.0d
-			y: -2.5d
-			description: ["A trusty stone pickaxe should get you started mining!"]
-			dependencies: ["1DA3DCB23E11575F"]
-			id: "646098224D198AE2"
-			tasks: [{
-				id: "525215606E113061"
-				type: "item"
-				icon: {
-					id: "tconstruct:pickaxe"
-					Count: 1b
-					tag: {
-						tic_multipliers: { }
-						tic_stats: {
-							"tconstruct:attack_speed": 1.2f
-							"tconstruct:mining_speed": 4.4f
-							"tconstruct:attack_damage": 1.0f
-							"tconstruct:harvest_level": 1.0f
-							"tconstruct:durability": 104.0f
-						}
-						tic_broken: 0b
-						tic_modifiers: [
-							{
-								name: "tconstruct:piercing"
-								level: 1s
-							}
-							{
-								name: "tconstruct:stonebound"
-								level: 3s
-							}
-						]
-						tic_materials: [
-							"tconstruct:stone"
-							"tconstruct:stone"
-							"tconstruct:stone"
-						]
-						Damage: 0
-						tic_persistent_data: {
-							abilities: 1
-							upgrades: 3
-						}
-					}
-				}
-				item: {
-					id: "tconstruct:pickaxe"
-					Count: 1b
-					tag: {
-						tic_multipliers: { }
-						tic_stats: {
-							"tconstruct:attack_damage": 0.0f
-							"tconstruct:attack_speed": 1.2f
-						}
-						tic_broken: 0b
-						tic_modifiers: [{
-							name: "tconstruct:piercing"
-							level: 1s
-						}]
-						Damage: 0
-						tic_persistent_data: { }
 					}
 				}
 			}]
