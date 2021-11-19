@@ -4,7 +4,7 @@
         "Name": "minecraft:gravel"
       },
       "under_material": {
-        "Name": "minecraft:blackstone"
+        "Name": "minecraft:stone"
       },
       "underwater_material": {
         "Name": "minecraft:gravel"

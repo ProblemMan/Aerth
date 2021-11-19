@@ -4,17 +4,7 @@
   "sea_level": 1,
   "disable_mob_generation": false,
   "structures": {
-    "stronghold": {
-      "distance": 32,
-      "spread": 3,
-      "count": 128
-    },
     "structures": {
-      "minecraft:buried_treasure": {
-        "spacing": 1,
-        "separation": 0,
-        "salt": 0
-      }
     }
   },
   "noise": {

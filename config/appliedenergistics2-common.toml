@@ -90,7 +90,7 @@
 	quartzOresPerCluster = 4
 	quartzOresBiomeBlacklist = []
 	#Range: 0.0 ~ 1.0
-	spawnChargedChance = 0.08
+	spawnChargedChance = 0
 
 [wireless]
 	wirelessTerminalDrainMultiplier = 1.0
