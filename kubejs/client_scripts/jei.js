@@ -5,7 +5,7 @@ console.info('Hello, World! (You will see this line every time client resources 
 onEvent('jei.hide.items', jei => {
 	//Applied Energistics
 	//jei.hide(Item.of('appliedenergistics2:facade').ignoreNBT())
-	jei.hide(/^(?!.*chest)appliedenergistics2:.*sky_stone.*/) //Negative lookaheads.. so useful
+	jei.hide(/^(?!.*chest)(?!.*block)appliedenergistics2:.*sky_stone.*/) //Negative lookaheads.. so useful
 	jei.hide('appliedenergistics2:sky_dust')
 	jei.hide(/appliedenergistics2:purified_.*_crystal/)
 	jei.hide(/appliedenergistics2:.*_seed/)
