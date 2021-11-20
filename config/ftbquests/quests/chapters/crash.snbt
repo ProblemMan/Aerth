@@ -95,8 +95,8 @@
 			}]
 		}
 		{
-			x: 2.0d
-			y: 2.0d
+			x: -0.5d
+			y: 0.5d
 			dependencies: ["4FC89524D77E0FC4"]
 			id: "7A155D7296363563"
 			tasks: [{
@@ -106,9 +106,12 @@
 			}]
 		}
 		{
-			x: -0.5d
-			y: 0.5d
-			dependencies: ["2FC373D3BD2D2F1D"]
+			x: -2.5d
+			y: 0.0d
+			description: [
+				"These can be obtained by slaying Rock elementals, more commonly known by the name Basalz"
+				"Basalz hang out in the Snow-capped Mountains and in the Badlands"
+			]
 			id: "4FC89524D77E0FC4"
 			tasks: [{
 				id: "12AF6A953781ADED"
@@ -215,7 +218,7 @@
 		}
 		{
 			title: "Oooo, shiny!"
-			x: 10.0d
+			x: 8.0d
 			y: -5.5d
 			dependencies: ["386256E2A493EFE2"]
 			id: "16E51FFBA86CA9CE"
@@ -270,7 +273,7 @@
 			}]
 		}
 		{
-			x: 7.0d
+			x: 8.0d
 			y: -4.0d
 			dependencies: ["393E1AED33B05243"]
 			id: "5EFC838A26C8F8CE"
@@ -392,7 +395,7 @@
 			}]
 		}
 		{
-			x: 7.0d
+			x: 6.0d
 			y: -5.5d
 			description: ["Deep down there are many precious gems, though what good they are in this foriegn land is yet to be determined."]
 			dependencies: ["393E1AED33B05243"]
@@ -409,6 +412,71 @@
 						value: "forge:gems"
 					}
 				}
+			}]
+		}
+		{
+			x: 8.0d
+			y: -7.5d
+			dependencies: ["386256E2A493EFE2"]
+			id: "6E00DF7886B8FF6B"
+			tasks: [{
+				id: "1CC2105649ADFB4B"
+				type: "item"
+				item: "thermal:cinnabar"
+			}]
+		}
+		{
+			x: 6.0d
+			y: -7.5d
+			description: [
+				"These can be obtained by slaying Lightning elementals, more commonly known by the name Blitz"
+				"Blitz are very closely related to its fire equivilant, the Blaze. They hang out in the same sort of biomes, namely the Desert and in the Badlands"
+			]
+			id: "0F1E5A88F92016C0"
+			tasks: [{
+				id: "39517B1D35DD753D"
+				type: "item"
+				item: "thermal:blitz_rod"
+			}]
+		}
+		{
+			x: 8.0d
+			y: -9.5d
+			description: ["The only way to generate 1.21 Gigawatts!"]
+			dependencies: ["0F1E5A88F92016C0"]
+			id: "718971F63E060691"
+			tasks: [{
+				id: "7B4BE261C2391C81"
+				type: "item"
+				item: "thermal:lightning_charge"
+			}]
+		}
+		{
+			title: "1.21 gigawatts!"
+			x: 10.0d
+			y: -7.5d
+			description: ["By applying suitable amounts of electrical energy the Certus will absorb the cinnabar!"]
+			dependencies: [
+				"6E00DF7886B8FF6B"
+				"16E51FFBA86CA9CE"
+				"718971F63E060691"
+			]
+			id: "372C51BBDB850B03"
+			tasks: [{
+				id: "038B1BCD4224C22C"
+				type: "item"
+				item: "appliedenergistics2:fluix_crystal"
+			}]
+		}
+		{
+			x: 12.0d
+			y: -7.5d
+			dependencies: ["372C51BBDB850B03"]
+			id: "671111E15DA46BD3"
+			tasks: [{
+				id: "7448F42C0D17FA76"
+				type: "item"
+				item: "appliedenergistics2:controller"
 			}]
 		}
 	]

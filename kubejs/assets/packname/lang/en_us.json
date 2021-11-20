@@ -16,6 +16,7 @@
     "block.appliedenergistics2.smooth_sky_stone_chest": "Polished Blackstone Chest",
     "block.appliedenergistics2.sky_stone_chest": "Blackstone Chest",
     "gui.appliedenergistics2.SkyChest": "Blackstone Chest",
+    "gui.appliedenergistics2.inWorldFluix": "Electrocute Cinnabar and Certus Quartz with exactly 1.21 gigawatts. \nOne Cinnabar and one Certus will make two Fluix. Any that do not meet this 1:1 ratio will be unrecoverably malformed and destroyed",
 
     "___c_________": "Xaero's Maps",
     "gui.xaero_no_world_map_message": "ERR: NO MAPPING DEVICE FOUND. PLEASE INSERT MAPPING DEVICE",

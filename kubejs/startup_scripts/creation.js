@@ -6,6 +6,12 @@ onEvent('item.registry', item => {
 onEvent('block.registry', block => {
     //Thermal
     block.create('bitumen_ore').material('rock').harvestTool('pickaxe', 2).displayName('Bitumen Ore')
+    //AppliedEnergistcs2
+    block.create('fluix_seed').material('rock').displayName('Fluix Seed Block').randomTick(event => {
+        for (i in event){
+            console.log(event[i])
+        }
+    })
 })
 
 onEvent('fluid.registry', fluid => {

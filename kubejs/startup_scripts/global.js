@@ -8,7 +8,8 @@ global.disabled_ores = [
     'tconstruct:cobalt_ore',
     'minecraft:nether_quartz_ore',
     'minecraft:nether_gold_ore',
-    'minecraft:iron_ore'
+    'minecraft:iron_ore',
+    'appliedenergistics2:charged_quartz_ore'
 ]
 
 

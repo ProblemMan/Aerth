@@ -112,9 +112,8 @@ onEvent('player.tick', t => { //use sparingly, lag warning.
     /* STUFF THAT GOES IN HERE:
     Applying potion effects for map disable/enable. Only do this every ~10 ticks.
     Music loop. Will probably need to have a tick counter to help with this.
-    WTHAISA - What the heck am I staring at. Like waila but shows cool animation and works on any distance (needs user input tho, probably an item... or keybind??)
+    WTHAISA - What the heck am I staring at. Like waila but shows cool animation and works on any distance (needs user input tho, probably a    n item... or keybind??)
     */
-   
     count[t.player] ++
     if (count[t.player] % 20 === 0) {
         //Now we know that we are on the twentieth tick

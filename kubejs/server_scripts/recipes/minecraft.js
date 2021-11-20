@@ -93,4 +93,15 @@ onEvent('recipes', r => {
 		'thermal:cinnabar_dust',
 		'thermal:cinnabar_dust',
 	  ])
+	  r.shapeless('1x thermal:frost_melon_seeds', [
+		'thermal:blizz_powder',
+		'thermal:blizz_powder',
+		'thermal:blizz_powder',
+		'thermal:blizz_powder',
+		'minecraft:melon_seeds',
+		'thermal:blizz_powder',
+		'thermal:blizz_powder',
+		'thermal:blizz_powder',
+		'thermal:blizz_powder'
+	  ])
 })

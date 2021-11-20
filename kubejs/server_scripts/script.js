@@ -4,6 +4,7 @@ settings.logAddedRecipes = true
 settings.logRemovedRecipes = false
 settings.logSkippedRecipes = false
 settings.logErroringRecipes = true
+global.debug = true
 
 console.info('Hello, World! (You will see this line every time server resources reload)')
 

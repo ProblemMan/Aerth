@@ -4,9 +4,11 @@ console.info('Hello, World! (You will see this line every time client resources 
 
 onEvent('jei.hide.items', jei => {
 	//Applied Energistics
-	jei.hide(Item.of('appliedenergistics2:facade').ignoreNBT())
+	//jei.hide(Item.of('appliedenergistics2:facade').ignoreNBT())
 	jei.hide(/^(?!.*chest)appliedenergistics2:.*sky_stone.*/) //Negative lookaheads.. so useful
 	jei.hide('appliedenergistics2:sky_dust')
+	jei.hide(/appliedenergistics2:purified_.*_crystal/)
+	jei.hide(/appliedenergistics2:.*_seed/)
 
 	//Ores
 	for (i of global.disabled_ores) {
@@ -20,4 +22,8 @@ onEvent('jei.add.items', jei => {
 	jei.add('thermal:ruby_ore')
 	jei.add('thermal:sapphire')
 	jei.add('thermal:ruby')
+	jei.add('thermal:sapphire_block')
+	jei.add('thermal:ruby_block')
+	jei.add('thermal:sapphire_dust')
+	jei.add('thermal:ruby_dust')
 })
