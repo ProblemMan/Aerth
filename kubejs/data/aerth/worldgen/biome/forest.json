@@ -1,5 +1,5 @@
 {
-  "scale": 0.05,
+  "scale": 0.2,
   "effects": {
     "mood_sound": {
       "sound": "minecraft:ambient.cave",
@@ -7,12 +7,12 @@
       "block_search_extent": 8,
       "offset": 2.0
     },
-    "sky_color": 7907327,
+    "sky_color": 7972607,
     "fog_color": 12638463,
     "water_color": 4159204,
     "water_fog_color": 329011
   },
-  "surface_builder": "packname:meteorite",
+  "surface_builder": "minecraft:grass",
   "carvers": {
     "air": [
       "minecraft:cave",
@@ -24,10 +24,7 @@
     [
       "minecraft:lake_lava"
     ],
-    [
-      "packname:scattered_asteroid",
-      "packname:scattered_asteroid_blackstone"
-    ],
+    [],
     [],
     [],
     [],
@@ -36,10 +33,10 @@
     ],
     [],
     [
-      "minecraft:patch_tall_grass_2",
-      "minecraft:plain_vegetation",
-      "minecraft:flower_plain_decorated",
-      "minecraft:patch_grass_plain",
+      "minecraft:forest_flower_vegetation",
+      "aerth:birch_other",
+      "minecraft:flower_default",
+      "minecraft:patch_grass_forest",
       "minecraft:brown_mushroom_normal",
       "minecraft:red_mushroom_normal",
       "minecraft:patch_sugar_cane",
@@ -51,17 +48,19 @@
   ],
   "starts": [],
   "spawners": {
-    "monster": [],
+    "monster": [
+      
+    ],
     "ambient": [],
     "water_creature": [],
     "water_ambient": [],
     "misc": []
   },
   "spawn_costs": {},
-  "player_spawn_friendly": true,
+  "player_spawn_friendly": false,
   "precipitation": "rain",
-  "temperature": 0.8,
-  "downfall": 0.0,
-  "category": "plains",
-  "depth": 0.125
+  "temperature": 0.7,
+  "downfall": 0.2,
+  "category": "forest",
+  "depth": 0.1
 }

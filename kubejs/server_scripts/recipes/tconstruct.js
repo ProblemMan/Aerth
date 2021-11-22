@@ -19,7 +19,7 @@ onEvent('recipes', r => {
                 type: entity
             },
             result: Item.of(drop).toResultJson()
-        }).id(`packname:severing/${removeMod(entity)}`)
+        }).id(`aerth:severing/${removeMod(entity)}`)
     }
     let castingTable = (output, cool_ticks, input_fluid, fluid_mb, input_item, consume) => {
         let recipe = {
@@ -37,7 +37,7 @@ onEvent('recipes', r => {
                 cast_consumed: (consume||false)
         })
         }
-        r.custom(recipe).id(`packname:casting_table/${removeMod(output)}`)
+        r.custom(recipe).id(`aerth:casting_table/${removeMod(output)}`)
     }
     let castingBasin = (output, cool_ticks, input_fluid, fluid_mb, input_item, consume) => {
         let recipe = {
@@ -55,7 +55,7 @@ onEvent('recipes', r => {
                 cast_consumed: (consume||false)
         })
         }
-        r.custom(recipe).id(`packname:casting_basin/${removeMod(output)}`)
+        r.custom(recipe).id(`aerth:casting_basin/${removeMod(output)}`)
     }
     let alloy = (output, output_mb, temperature, inputA, inputA_mb, inputB, inputB_mb, inputC, inputC_mb) => { //Complex is three fluid inputs
         let recipe = {
@@ -82,7 +82,7 @@ onEvent('recipes', r => {
                 amount: inputC_mb
             })
         }
-        r.custom(recipe).id(`packname:alloy/${removeMod(output)}`)
+        r.custom(recipe).id(`aerth:alloy/${removeMod(output)}`)
     }
     let entityMelting = (fluid, fluid_mb, entity, entity_dmg) => {
         r.custom({
@@ -95,7 +95,7 @@ onEvent('recipes', r => {
                 amount: fluid_mb
             },
             damage: entity_dmg
-        }).id(`packname:melting/${removeMod(entity)}_to_${removeMod(fluid)}`)
+        }).id(`aerth:melting/${removeMod(entity)}_to_${removeMod(fluid)}`)
     }
     let fuel = (fluid, fluid_mb, temp, duration) => {
         r.custom({
@@ -106,7 +106,7 @@ onEvent('recipes', r => {
             },
             duration: duration,
             temperature: temp
-        }).id(`packname:fuel/${removeMod(fluid)}`)
+        }).id(`aerth:fuel/${removeMod(fluid)}`)
     }
     let itemMelting = (fluid, fluid_mb, input, temp, duration, extra_ore_products) => {
         let recipe = {
@@ -127,7 +127,7 @@ onEvent('recipes', r => {
             recipe.byproducts = extra_ore_products
             recipe.type = 'tconstruct:ore_melting' //do these work the same way???
         }
-        r.custom(recipe).id(`packname:melting/${removeMod(input)}`)
+        r.custom(recipe).id(`aerth:melting/${removeMod(input)}`)
     }
     //#endregion
     //Thermal
@@ -156,7 +156,7 @@ onEvent('recipes', r => {
 
     alloy('tconstruct:molten_signalum', ingots(4), 1000, 'tconstruct:molten_copper', ingots(3), 'tconstruct:molten_silver', ingots(1), 'thermal:redstone', ingots(4)) //TODO: balance amounts of molten cinnabar used here.
 
-    //Packname
+    //aerth
     alloy('kubejs:molten_hardened_glass', 100, 500, 'tconstruct:molten_glass', 100, 'tconstruct:molten_obsidian', 50)
 
     fuel('kubejs:blitzing_blood', 50, 2000, 10)

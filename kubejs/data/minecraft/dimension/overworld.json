@@ -1,9 +1,9 @@
 {
-	"type": "packname:planet",
+	"type": "aerth:planet",
 	"generator": {
 		"type": "minecraft:noise",
 		"seed": 489245266,
-		"settings": "packname:planet",
+		"settings": "aerth:planet",
 		"biome_source": {
 			"type": "minecraft:multi_noise",
 			"seed": 489245266,
@@ -37,7 +37,7 @@
 			},
 			"biomes": [
 				{
-					"biome": "packname:snowy_tundra",
+					"biome": "aerth:snowy_tundra",
 					"parameters": {
 						"altitude": 0,
 						"temperature": -1,
@@ -47,7 +47,7 @@
 					}
 				},
 				{
-					"biome": "packname:frosty_lowlands",
+					"biome": "aerth:frosty_lowlands",
 					"parameters": {
 						"altitude": 0,
 						"temperature": -0.8,
@@ -57,7 +57,7 @@
 					}
 				},
 				{
-					"biome": "packname:snowcapped_peaks",
+					"biome": "aerth:snowcapped_peaks",
 					"parameters": {
 						"altitude": 0,
 						"temperature": -0.6,
@@ -67,7 +67,7 @@
 					}
 				},
 				{
-					"biome": "packname:gravelly_mountains",
+					"biome": "aerth:gravelly_mountains",
 					"parameters": {
 						"altitude": 0,
 						"temperature": -0.4,
@@ -77,7 +77,7 @@
 					}
 				},
 				{
-					"biome": "packname:mountain_edge",
+					"biome": "aerth:mountain_edge",
 					"parameters": {
 						"altitude": 0,
 						"temperature": -0.2,
@@ -87,7 +87,7 @@
 					}
 				},
 				{
-					"biome": "packname:meteorite_plains",
+					"biome": "aerth:meteorite_plains",
 					"parameters": {
 						"altitude": 0,
 						"temperature": 0,
@@ -97,7 +97,7 @@
 					}
 				},
 				{
-					"biome": "packname:forest",
+					"biome": "aerth:forest",
 					"parameters": {
 						"altitude": 0,
 						"temperature": 0.2,
@@ -107,7 +107,7 @@
 					}
 				},
 				{
-					"biome": "packname:badlands",
+					"biome": "aerth:badlands",
 					"parameters": {
 						"altitude": 0,
 						"temperature": 0.4,
@@ -117,7 +117,7 @@
 					}
 				},
 				{
-					"biome": "packname:savanna",
+					"biome": "aerth:savanna",
 					"parameters": {
 						"altitude": 0,
 						"temperature": 0.6,
@@ -127,7 +127,7 @@
 					}
 				},
 				{
-					"biome": "packname:desert",
+					"biome": "aerth:desert",
 					"parameters": {
 						"altitude": 0,
 						"temperature": 0.8,
@@ -137,7 +137,7 @@
 					}
 				},
 				{
-					"biome": "packname:desert_hills",
+					"biome": "aerth:desert_hills",
 					"parameters": {
 						"altitude": 0,
 						"temperature": 1,

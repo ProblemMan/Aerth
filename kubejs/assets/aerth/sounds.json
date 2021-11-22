@@ -1,84 +1,84 @@
 {
     "player/artificial_serenity": {
          "sounds":[{
-            "name": "packname:player/artificial_serenity",
+            "name": "aerth:player/artificial_serenity",
             "weight": 1,
             "stream": true
              }]
     },
     "player/boss_theme": {
         "sounds":[{
-            "name": "packname:player/boss_theme",
+            "name": "aerth:player/boss_theme",
             "weight": 1,
             "stream": true
         }]
    },
    "player/cascade": {
         "sounds":[{
-            "name": "packname:player/cascade",
+            "name": "aerth:player/cascade",
             "weight": 1,
             "stream": true
         }]
     },
     "player/castles_of_ice": {
         "sounds":[{
-            "name": "packname:player/castles_of_ice",
+            "name": "aerth:player/castles_of_ice",
             "weight": 1,
             "stream": true
         }]
     },
     "player/claustrophobia": {
         "sounds":[{
-            "name": "packname:player/claustrophobia",
+            "name": "aerth:player/claustrophobia",
             "weight": 1,
             "stream": true
         }]
     },
     "player/flora": {
         "sounds":[{
-            "name": "packname:player/flora",
+            "name": "aerth:player/flora",
             "weight": 1,
             "stream": true
         }]
     },
     "player/glades": {
         "sounds":[{
-            "name": "packname:player/glades",
+            "name": "aerth:player/glades",
             "weight": 1,
             "stream": true
         }]
     },
     "player/imagine": {
         "sounds":[{
-            "name": "packname:player/imagine",
+            "name": "aerth:player/imagine",
             "weight": 1,
             "stream": true
         }]
    },
    "player/infinity_awaits_us": {
     "sounds":[{
-            "name": "packname:player/infinity_awaits_us",
+            "name": "aerth:player/infinity_awaits_us",
             "weight": 1,
             "stream": true
     }]
     },
     "player/mini-boss_theme": {
         "sounds":[{
-            "name": "packname:player/mini-boss_theme",
+            "name": "aerth:player/mini-boss_theme",
             "weight": 1,
             "stream": true
         }]
     },
     "player/tetanus": {
         "sounds":[{
-            "name": "packname:player/tetanus",
+            "name": "aerth:player/tetanus",
             "weight": 1,
             "stream": true
         }]
     },
     "player/village_theme": {
         "sounds":[{
-            "name": "packname:player/village_theme",
+            "name": "aerth:player/village_theme",
             "weight": 1
         }],
         "stream": true

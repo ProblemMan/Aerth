@@ -1,5 +1,5 @@
 onEvent('fluid.tags', tag => {
-    tag.add('packname:singularity_consume_fluids', /^(?!.*singularity).*/)
+    tag.add('aerth:singularity_consume_fluids', /^(?!.*singularity).*/)
 })
 onEvent('recipes', recipe => {
     

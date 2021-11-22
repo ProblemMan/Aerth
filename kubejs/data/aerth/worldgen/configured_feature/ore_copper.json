@@ -34,7 +34,7 @@
 								"size": 9,
 								"target": {
 									"predicate_type": "minecraft:tag_match",
-									"tag": "packname:base_stone_planet"
+									"tag": "aerth:base_stone_planet"
 								}
 							}
 						}

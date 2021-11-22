@@ -202,7 +202,7 @@
 				type: "biome"
 				title: "Visit the Badlands"
 				icon: "minecraft:terracotta"
-				biome: "packname:badlands"
+				biome: "aerth:badlands"
 			}]
 		}
 		{
@@ -250,7 +250,7 @@
 				type: "biome"
 				title: "Visit the Meteriote Plains"
 				icon: "minecraft:obsidian"
-				biome: "packname:meteorite_plains"
+				biome: "aerth:meteorite_plains"
 			}]
 		}
 		{

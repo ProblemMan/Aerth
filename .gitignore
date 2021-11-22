@@ -21,7 +21,7 @@ config/jei/bookmarks.ini
 config/xaeropatreon.txt
 *.pdn
 kubejs/pack.mcmeta
-kubejs/packname_archive.zip
+kubejs/aerth_archive.zip
 /*xaero*/
 config/xaerominimap.txt
 /.mixin.out

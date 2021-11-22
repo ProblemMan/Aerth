@@ -159,7 +159,7 @@ onEvent('player.logged_in', event => {
 	})
 })
 onEvent('item.right_click', c => {
-    if (c.item == 'packname:wthaisa') {
+    if (c.item == 'aerth:wthaisa') {
         console.log('WTHAISA')
         let stared = block_name(c.player.rayTrace(50).block)
         c.server.runCommandSilent(`title ${c.player} title {"text":"${stared}", "color": "aqua"}`)
