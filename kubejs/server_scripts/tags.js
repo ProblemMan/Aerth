@@ -29,5 +29,7 @@ onEvent('block.tags', t => {
 })
 
 onEvent('fluid.tags', t => {
-
+    t.add('minecraft:water', 'minecraft:empty')
+    t.removeAllTagsFrom('minecraft:water')
+    t.removeAllTagsFrom('minecraft:flowing_water')
 })
