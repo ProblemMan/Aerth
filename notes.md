@@ -5,33 +5,23 @@ Waystones should be easier. Maybe balance by making sharestones early game, and 
 
 Singularity should be a major crafting component - maybe an infused singularity cluster?? Melt down into gooey singularity then allow with stufff
 
+Recipe for slime saplings.
+Extract slime from slime saplings
+
 
 new hotter tinkers fuel, molten fluix? made in magma crucible
 
-liquid of smart? made of melted books
-
-
-make large singularity require the centre thingy from a wireless ae2 thingo
-
-Gate gunpowder so its late game, hich means quantum entangled singularritys are late game as well, which is good.
-
 Crystal compenents, a few new tiers.
 
-Nether quartz crafted from certus 
-
 Add info in tooltip for waystones to suggest sharestones
-Machine Frame requires processors. Only the engineering one though. Servo requires calculation press.
-Inscriber requires non sticky pistons, and presses are craftable (sky stone too, blackstone). 
 
-silcon press should give a couple, or silicon recipe gives 2 silicon
-
-diamond shards are used for engineer presses not diamonds
+Inscriber requires non sticky pistons, and presses are craftable (sky stone too, blackstone). Presses maybe from amadron trading.. tho thats VERY late game. Split ae2 up into late and early game, with late game stuff requiring processors. Maybe make early game stuff require one processor type crafted in a thermal thing?
 
 Floof crafting recipe. maybe like u grow them in vats??? idk.. also see if i can change texture to be black floofs cause those are cool.
 
 Bottle of quantum darkness. Collected by right clicking in the spatial dimension.
 
-Interfaces are later game... thats right, no autocrafting till later on. Try force them to use molecular assemblers with hoppers (or importers and patterns at first. Oh yeah, disable/make later game the sequential fabricator.
+Interfaces are later game... thats right, no autocrafting till later on. Try force them to use molecular assemblers with hoppers (or importers and patterns at first. Oh yeah, disable/make later game the sequential fabricator. Still wondering about this^
 [Custom Augments](https://github.com/KingLemming/1.16/blob/main/CoFHCore/src/main/java/cofh/lib/util/constants/NBTTags.java)
 
 # Mobs and spawning
@@ -47,7 +37,7 @@ Adding mekanism for the pipes (should ideally be later game) and the reactors + 
 
 # KUBE HUD
 Music. Hopefully
-WAISA - use an item to raytrace and tell you the block you are staring at. Cool blue holographic zoom line animation
+WTHAISA - use an item to raytrace and tell you the block you are staring at. Cool blue holographic zoom line animation
 
 
 # Story
