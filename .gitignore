@@ -35,3 +35,4 @@ config/xaerominimap.txt
 /kubejs/server_scripts/muck_around.js
 *.disabled
 config/pneumaticcraft/ArmorFeatureStatus.cfg
+config/pneumaticcraft/ArmorFeatureStatus.cfg

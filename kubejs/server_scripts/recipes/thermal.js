@@ -1,6 +1,18 @@
 // priority: 1
 
 onEvent('recipes', r => {
+    //Functions
+    let treeExtractor = (output, output_mb, log, leaves) => {
+        r.custom({
+            type: 'thermal:tree_extractor',
+            trunk: log,
+            leaves: leaves,
+            result: {
+                fluid: output,
+                amount: output_mb
+            }
+        })
+    }
     //Applied Energistics 2
     //TODO: Add others, finalise numbers (after augments added)
     r.recipes.thermal.insolator('appliedenergistics2:purified_certus_quartz_crystal', 'appliedenergistics2:certus_crystal_seed').water(64000).energyMod(10.0).id('aerth:insolator/purified_certus_quartz_crystal')
@@ -18,6 +30,10 @@ onEvent('recipes', r => {
 
     //Tinkers Construct
     r.recipes.thermal.smelter('tconstruct:cobalt_ingot', ['2x #forge:ingots/lead', '#forge:dusts/apatite']).id('aerth:smelter/alloy/cobalt')
+    treeExtractor('tconstruct:earth_slime', 25, 'tconstruct:greenheart_log', 'tconstruct:earth_slime_leaves')
+    treeExtractor('tconstruct:sky_slime', 25, 'tconstruct:skyroot_log', 'tconstruct:sky_slime_leaves')
+    treeExtractor('tconstruct:ender_slime', 25, 'tconstruct:greenheart_log', 'tconstruct:ender_slime_leaves')
+    treeExtractor('tconstruct:blood', 25, 'tconstruct:bloodshroom_log', 'tconstruct:blood_slime_leaves')
 
 
 })
