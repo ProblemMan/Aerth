@@ -36,3 +36,4 @@ config/xaerominimap.txt
 *.disabled
 config/pneumaticcraft/ArmorFeatureStatus.cfg
 config/pneumaticcraft/ArmorFeatureStatus.cfg
+/local/
