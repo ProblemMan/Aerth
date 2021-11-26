@@ -12,7 +12,8 @@ onEvent('recipes', r => {
 
     //Thermal
     r.replaceInput({not: {output: 'minecraft:iron_ingot'}},'minecraft:iron_nugget', 'thermal:tin_nugget')
-    r.replaceInput({id: /thermal:dynamo.*/,}, 'minecraft:iron_ingot', 'thermal:signalum_ingot')
+    r.replaceInput({id: /thermal:dynamo.*/}, 'minecraft:iron_ingot', 'thermal:signalum_ingot')
+    r.replaceInput({id: /thermal:machine.*/}, 'thermal:invar_gear', '#forge:gears/bronze')
 
     //Minecraft
     r.replaceInput({output: 'minecraft:bucket'}, 'minecraft:iron_ingot', 'thermal:tin_ingot')

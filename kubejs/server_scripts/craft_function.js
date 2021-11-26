@@ -1,11 +1,3 @@
-let removeBlockProperties = (str) => {
-    if (str.indexOf('[') != -1){
-        output = str.substring(0, str.indexOf('['))
-    } else {
-        output = str
-    }
-    return output
-}
 let getBlockFromKey = (key, object) => {
 	let block = ''
 	if (key in object) {

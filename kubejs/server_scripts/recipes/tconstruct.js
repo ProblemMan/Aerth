@@ -1,18 +1,8 @@
 // priority: 1
 
 onEvent('recipes', r => {
-    //helpful functions
-    let removeMod = (string) => {
-        return string.substring((string.indexOf(':') + 1))
-    }
-    let ingots = (n) => {
-        return n * 144 //TODO: Change this over for more even amounts? 90 sounds okay-ish
-    }
-    let nuggets = (n) => {
-        return n * (ingots(1) / 9)
-    }
     //Recipe Functions
-    let severing = (entity, drop) => {
+    const severing = (entity, drop) => {
         r.custom({
             type: 'tconstruct:severing',
             entity: {
@@ -21,7 +11,7 @@ onEvent('recipes', r => {
             result: Item.of(drop).toResultJson()
         }).id(`aerth:severing/${removeMod(entity)}`)
     }
-    let castingTable = (output, cool_ticks, input_fluid, fluid_mb, input_item, consume) => {
+    const castingTable = (output, cool_ticks, input_fluid, fluid_mb, input_item, consume) => {
         let recipe = {
             type: 'tconstruct:casting_table',
             fluid: {
@@ -39,7 +29,7 @@ onEvent('recipes', r => {
         }
         r.custom(recipe).id(`aerth:casting_table/${removeMod(output)}`)
     }
-    let castingBasin = (output, cool_ticks, input_fluid, fluid_mb, input_item, consume) => {
+    const castingBasin = (output, cool_ticks, input_fluid, fluid_mb, input_item, consume) => {
         let recipe = {
             type: 'tconstruct:casting_basin',
             fluid: {
@@ -57,7 +47,7 @@ onEvent('recipes', r => {
         }
         r.custom(recipe).id(`aerth:casting_basin/${removeMod(output)}`)
     }
-    let alloy = (output, output_mb, temperature, inputA, inputA_mb, inputB, inputB_mb, inputC, inputC_mb) => { //Complex is three fluid inputs
+    const alloy = (output, output_mb, temperature, inputA, inputA_mb, inputB, inputB_mb, inputC, inputC_mb) => {
         let recipe = {
             type: 'tconstruct:alloy',
             inputs: [
@@ -84,7 +74,7 @@ onEvent('recipes', r => {
         }
         r.custom(recipe).id(`aerth:alloy/${removeMod(output)}`)
     }
-    let entityMelting = (fluid, fluid_mb, entity, entity_dmg) => {
+    const entityMelting = (fluid, fluid_mb, entity, entity_dmg) => {
         r.custom({
             type: 'tconstruct:entity_melting',
             entity: {
@@ -97,7 +87,7 @@ onEvent('recipes', r => {
             damage: entity_dmg
         }).id(`aerth:melting/${removeMod(entity)}_to_${removeMod(fluid)}`)
     }
-    let fuel = (fluid, fluid_mb, temp, duration) => {
+    const fuel = (fluid, fluid_mb, temp, duration) => {
         r.custom({
             type: 'tconstruct:melting_fuel',
             fluid: {
@@ -108,7 +98,7 @@ onEvent('recipes', r => {
             temperature: temp
         }).id(`aerth:fuel/${removeMod(fluid)}`)
     }
-    let itemMelting = (fluid, fluid_mb, input, temp, duration, extra_ore_products) => {
+    const itemMelting = (fluid, fluid_mb, input, temp, duration, extra_ore_products) => {
         let recipe = {
             type: 'tconstruct:melting',
             ingredient: {
@@ -125,11 +115,11 @@ onEvent('recipes', r => {
         if (extra_ore_products != null) {
             console.log('here')
             recipe.byproducts = extra_ore_products
-            recipe.type = 'tconstruct:ore_melting' //do these work the same way???
+            recipe.type = 'tconstruct:ore_melting'
         }
         r.custom(recipe).id(`aerth:melting/${removeMod(input)}`)
     }
-    //#endregion
+
     //Thermal
 
     for (i of ['blizz', 'blitz', 'basalz']){
@@ -137,12 +127,12 @@ onEvent('recipes', r => {
     }
 
 
-    castingBasin('thermal:machine_frame', 200, 'kubejs:molten_hardened_glass', 4000, 'thermal:quartz_gear', true)
-    castingBasin('thermal:obsidian_glass', 100, 'kubejs:molten_hardened_glass', 1000)
+    castingBasin('thermal:machine_frame', 200, 'aerth:molten_hardened_glass', 4000, 'thermal:quartz_gear', true)
+    castingBasin('thermal:obsidian_glass', 100, 'aerth:molten_hardened_glass', 1000)
 
-    entityMelting('kubejs:balzing_blood', 20, 'thermal:basalz', 2)
-    entityMelting('kubejs:blizzing_blood', 20, 'thermal:blizz', 2)
-    entityMelting('kubejs:blitzing_blood', 20, 'thermal:blitz', 2)
+    entityMelting('aerth:balzing_blood', 20, 'thermal:basalz', 2)
+    entityMelting('aerth:blizzing_blood', 20, 'thermal:blizz', 2)
+    entityMelting('aerth:blitzing_blood', 20, 'thermal:blitz', 2)
     
     itemMelting('thermal:redstone', ingots(1), 'thermal:cinnabar', 700, 70)
     itemMelting('thermal:redstone', ingots(1), 'thermal:cinnabar_dust', 700, 60)
@@ -156,18 +146,18 @@ onEvent('recipes', r => {
 
     alloy('tconstruct:molten_signalum', ingots(4), 1000, 'tconstruct:molten_copper', ingots(3), 'tconstruct:molten_silver', ingots(1), 'thermal:redstone', ingots(4)) //TODO: balance amounts of molten cinnabar used here.
 
-    //aerth
-    alloy('kubejs:molten_hardened_glass', 100, 500, 'tconstruct:molten_glass', 100, 'tconstruct:molten_obsidian', 50)
+    //Aerth
+    alloy('aerth:molten_hardened_glass', 100, 500, 'tconstruct:molten_glass', 100, 'tconstruct:molten_obsidian', 50)
 
-    fuel('kubejs:blitzing_blood', 50, 2000, 10)
-    fuel('kubejs:blizzing_blood', 100, 1, 2000)
+    fuel('aerth:blitzing_blood', 50, 2000, 10)
+    fuel('aerth:blizzing_blood', 100, 1, 2000)
 
-    itemMelting('kubejs:molten_singularity', ingots(1), 'appliedenergistics2:singularity', 1500, 100)
-    itemMelting('kubejs:molten_singularity', ingots(1.5/*TODO:Balance this*/), 'appliedenergistics2:quantum_entangled_singularity', 1700, 50)
-    //alloy('kubejs:molten_singularity', 10, 1, 'kubejs:molten_singularity', 10, /tconstruct:.*/, 1) //no regex support for ingredients 😢. Tags work tho!
+    itemMelting('aerth:molten_singularity', ingots(1), 'appliedenergistics2:singularity', 1500, 100)
+    itemMelting('aerth:molten_singularity', ingots(1.5/*TODO:Balance this*/), 'appliedenergistics2:quantum_entangled_singularity', 1700, 50)
+    //alloy('aerth:molten_singularity', 10, 1, 'aerth:molten_singularity', 10, /tconstruct:.*/, 1) //no regex support for ingredients 😢. Tags work tho!
 
     //Minecraft
     castingTable('minecraft:redstone', 30, 'thermal:redstone', ingots(1), 'appliedenergistics2:certus_quartz_dust', true)
     castingBasin('minecraft:redstone_block', 300, 'thermal:redstone', ingots(9), 'appliedenergistics2:quartz_block', true)
-    castingTable('minecraft:ender_pearl', 200, 'kubejs:molten_singularity', ingots(1), 'appliedenergistics2:certus_crystal_seed', true)
+    castingTable('minecraft:ender_pearl', 200, 'aerth:molten_singularity', ingots(1), 'appliedenergistics2:certus_crystal_seed', true)
 })

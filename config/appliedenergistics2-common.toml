@@ -67,7 +67,7 @@
 
 [spatialio]
 	#BE CAREFUL, CAN CORRUPT YOUR WORLD! Will use #spatial/whitelist as whitelist.
-	spatialBlockTags = false
+	spatialBlockTags = true
 	spatialPowerExponent = 1.35
 	spatialPowerMultiplier = 1250.0
 

@@ -54,7 +54,7 @@
 					tag: {
 						items: [
 							{
-								id: "kubejs:molten_hardened_glass_bucket"
+								id: "aerth:molten_hardened_glass_bucket"
 								Count: 1b
 							}
 							{

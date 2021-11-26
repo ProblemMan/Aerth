@@ -1,6 +1,6 @@
 //priority: 100
-
-global.disabled_ores = [
+global.aerth = {}
+global.aerth.disabled_ores = [
     'minecraft:diamond_ore',
     'tconstruct:copper_ore',
     'minecraft:gold_ore',
@@ -12,4 +12,23 @@ global.disabled_ores = [
     'appliedenergistics2:charged_quartz_ore'
 ]
 
-
+global.ae2 = {}
+global.ae2.cableColours = [
+    'yellow',
+    'white',
+    'red',
+    'purple',
+    'pink',
+    'orange',
+    'magenta',
+    'lime',
+    'light_gray',
+    'light_blue',
+    'green',
+    'gray',
+    'fluix',
+    'cyan',
+    'brown',
+    'blue',
+    'black'
+]

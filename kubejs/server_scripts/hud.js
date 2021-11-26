@@ -32,21 +32,15 @@ let wthaisa = {
     color: 'red'
 }
 
-let fluid_keys = { //TODO: Turn these into lang keys, like block.minecraft.water and block.tconstruct.blazing_blood_fluid. Replace this entirely with lang keys
+let fluid_keys = { //TODO: Turn these into lang keys, like block.minecraft.water and block.tconstruct.blazing_blood_fluid. Replace this entirely with lang keys. That is, as soon as kube works with lang keys
 	'minecraft:water': 'Water',
 	'minecraft:lava': 'Lava',
 	'tconstruct:blazing_blood_fluid': 'Blazing Blood',
-	'kubejs:blitzing_blood': 'Blitzing Blood',
-	'kubejs:blizzing_blood': 'Blizzing Blood',
-	'kubejs:balzing_blood': 'Balzing Blood'
+	'aerth:blitzing_blood': 'Blitzing Blood',
+	'aerth:blizzing_blood': 'Blizzing Blood',
+	'aerth:balzing_blood': 'Balzing Blood'
 }
 
-let removeMod = (string) => {
-	return string.substring((string.indexOf(':') + 1))
-}
-let leaveMod = (string) => {
-	return string.substring(0, string.indexOf(':'))
-}
 
 
 let quest_alerts = {

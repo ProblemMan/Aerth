@@ -1,9 +1,9 @@
 // priority: 1
 onEvent('item.tags', t => {
-    t.add('forge:ores/bitumen', 'kubejs:bitumen_ore')
+    t.add('forge:ores/bitumen', 'aerth:bitumen_ore')
     t.add('forge:gems/quartz', '#appliedenergistics2:crystals/certus')
 
-    for (i of global.disabled_ores){
+    for (i of global.aerth.disabled_ores){
         t.removeAllTagsFrom(i)
     }
 

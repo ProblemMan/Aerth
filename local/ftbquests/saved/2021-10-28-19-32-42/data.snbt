@@ -1,6 +1,6 @@
 {
 	version: 13
-	title: "aerth"
+	title: "Aerth"
 	icon: "minecraft:sea_lantern"
 	default_reward_team: false
 	default_consume_items: false

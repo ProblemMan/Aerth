@@ -3,7 +3,7 @@
 console.info('Hello, World! (You will see this line every time client resources reload)')
 
 onEvent('jei.hide.items', jei => {
-	//Applied Energistics
+	//Applied Energistics 2
 	//jei.hide(Item.of('appliedenergistics2:facade').ignoreNBT())
 	jei.hide(/^(?!.*chest)(?!.*block)appliedenergistics2:.*sky_stone.*/) //Negative lookaheads.. so useful
 	jei.hide('appliedenergistics2:sky_dust')
@@ -11,7 +11,7 @@ onEvent('jei.hide.items', jei => {
 	jei.hide(/appliedenergistics2:.*_seed/)
 
 	//Ores
-	for (i of global.disabled_ores) {
+	for (i of global.aerth.disabled_ores) {
 		jei.hide(i)
 	}
 })

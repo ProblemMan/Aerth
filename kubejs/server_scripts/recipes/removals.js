@@ -12,10 +12,13 @@ onEvent('recipes', r => {
     r.remove({output: 'thermal:rf_coil'})
     r.remove({output: 'thermal:signalum_ingot', not: {input: 'thermal:signalum_dust'}})
     r.remove({output: 'thermal:signalum_dust'})
+    r.remove({id:'thermal:devices/rock_gen/rock_gen_basalt'})
+    r.remove({output: 'thermal:device_rock_gen'})
 
     //Applied Energistics 2
     r.remove({output: /appliedenergistics2:.*sky_stone.*/})
     r.remove({output: 'appliedenergistics2:sky_dust'})
+    r.remove({output: /appliedenergistics2:.*_smart_.*cable/})
 
     //Tinkers Construct
     r.remove({id: /tconstruct:tools\/severing\/.*_head/})
@@ -26,9 +29,8 @@ onEvent('recipes', r => {
     r.remove({id: /tconstruct:tables\/.*_anvil/})
     r.remove({id: 'tconstruct:smeltery/alloys/molten_signalum'})
 
-
     //Ores
-    for (i of global.disabled_ores) {
+    for (i of global.aerth.disabled_ores) {
       r.remove({input: i})    
       r.remove({id: /tconstruct:smeltery\/melting\/.*\/i/})
     }
